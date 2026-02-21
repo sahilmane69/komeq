@@ -1,8 +1,6 @@
 import { Skiper40 } from "@/components/ui/skiper-ui/skiper40";
 import { HeroText } from "@/components/ui/skiper-ui/hero-text";
-import dynamic from "next/dynamic";
-
-const Skiper31 = dynamic(() => import("@/components/ui/skiper-ui/skiper31").then(mod => mod.Skiper31), { ssr: false });
+import { Skiper31 } from "@/components/ui/skiper-ui/skiper31-client";
 import { StickyCards } from "@/components/ui/skiper-ui/sticky-cards";
 import { ScrollingSpecs } from "@/components/ui/skiper-ui/scrolling-specs";
 import { AnimatedPrice } from "@/components/ui/skiper-ui/animated-price";
@@ -16,8 +14,9 @@ export default function Home() {
     <ReactLenis root>
       <div className="relative min-h-[300vh] w-full bg-background font-sans text-foreground overflow-hidden">
         <Skiper40 />
-        <Skiper31 />
+
         <HeroText />
+        <Skiper31 />
 
         <div id="about">
           <StickyCards />

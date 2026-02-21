@@ -1,8 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import ReactLenis from "lenis/react";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -138,32 +137,30 @@ export const Skiper31 = () => {
           target: targetRef3,
      });
 
-     const text = "see more from gxuri";
+     const text = "powered by komeq & arduino";
      const characters = text.split("");
      const centerIndex = Math.floor(characters.length / 2);
 
-     const macIcon = [
-          "/mac/Discord.png",
-          "/mac/figma.png",
-          "/mac/Framer.png",
-          "/mac/Github.png",
-          "/mac/Monog.png",
-          "/mac/notion.png",
-          "/mac/Pieces.png",
-          "/mac/Postman.png",
-          "/mac/vsCode.png",
+     const techLogos = [
+          "/image.png",
+          "https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg",
+          "/image.png",
+          "https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg",
+          "/image.png",
+          "https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Logo.svg",
+          "/image.png",
      ];
-     const iconCenterIndex = Math.floor(macIcon.length / 2);
+     const iconCenterIndex = Math.floor(techLogos.length / 2);
 
      return (
           <main className="w-full bg-background relative z-10 pointer-events-none">
 
                <div
                     ref={targetRef}
-                    className="relative box-border flex h-[100vh] items-center justify-center gap-[2vw] overflow-hidden bg-background p-[2vw]"
+                    className="relative box-border flex h-screen items-center justify-center gap-[2vw] overflow-hidden bg-background p-[2vw]"
                >
                     <div
-                         className="font-geist w-full max-w-4xl text-center text-6xl font-bold uppercase tracking-tighter text-foreground"
+                         className="font-geist w-full max-w-4xl text-center text-4xl md:text-6xl font-bold uppercase tracking-tighter text-foreground"
                          style={{
                               perspective: "500px",
                          }}
@@ -175,6 +172,59 @@ export const Skiper31 = () => {
                                    index={index}
                                    centerIndex={centerIndex}
                                    scrollYProgress={scrollYProgress}
+                              />
+                         ))}
+                    </div>
+               </div>
+
+               <div
+                    ref={targetRef2}
+                    className="relative -mt-[100vh] box-border flex h-screen flex-col items-center justify-center gap-[2vw] overflow-hidden bg-background p-[2vw]"
+               >
+                    <p className="font-geist flex items-center justify-center gap-3 text-2xl font-medium tracking-tight text-foreground">
+                         <Bracket className="h-12 text-foreground" />
+                         <span className="font-geist font-medium text-foreground">
+                              Integrate with your fav tech stack
+                         </span>
+                         <Bracket className="h-12 scale-x-[-1] text-foreground" />
+                    </p>
+                    <div className="font-geist w-full max-w-4xl text-center text-6xl font-bold uppercase tracking-tighter text-foreground">
+                         {techLogos.map((char, index) => (
+                              <CharacterV2
+                                   key={index}
+                                   char={char}
+                                   index={index}
+                                   centerIndex={iconCenterIndex}
+                                   scrollYProgress={scrollYProgress2}
+                              />
+                         ))}
+                    </div>
+               </div>
+
+               <div
+                    ref={targetRef3}
+                    className="relative -mt-[95vh] box-border flex h-screen flex-col items-center justify-center gap-[2vw] overflow-hidden bg-background p-[2vw]"
+               >
+                    <p className="font-geist flex items-center justify-center gap-3 text-2xl font-medium tracking-tight text-foreground">
+                         <Bracket className="h-12 text-foreground" />
+                         <span className="font-geist font-medium text-foreground">
+                              Integrate with your fav tech stack
+                         </span>
+                         <Bracket className="h-12 scale-x-[-1] text-foreground" />
+                    </p>
+                    <div
+                         className="font-geist w-full max-w-4xl text-center text-6xl font-bold uppercase tracking-tighter text-foreground"
+                         style={{
+                              perspective: "500px",
+                         }}
+                    >
+                         {techLogos.map((char, index) => (
+                              <CharacterV3
+                                   key={index}
+                                   char={char}
+                                   index={index}
+                                   centerIndex={iconCenterIndex}
+                                   scrollYProgress={scrollYProgress3}
                               />
                          ))}
                     </div>
