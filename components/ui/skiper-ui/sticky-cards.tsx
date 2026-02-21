@@ -134,7 +134,7 @@ export const StickyCards = () => {
           <div className="relative z-10 w-full -mt-[20vh]">
                <div className="pointer-events-none h-[10vh] w-full bg-linear-to-b from-transparent to-background" />
 
-               <div className="bg-background pb-0 pt-0">
+               <div className="bg-transparent pb-0 pt-0">
                     <StickyCard002
                          cards={[
                               { id: 1, image: "/komeqimg/image copy.png" },

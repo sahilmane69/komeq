@@ -27,7 +27,7 @@ export function AnimatedPrice() {
      }, [inView, count]);
 
      return (
-          <div className="relative flex h-[80vh] w-full flex-col items-center justify-center bg-background text-foreground z-20">
+          <div className="relative flex h-[80vh] w-full flex-col items-center justify-center bg-transparent text-foreground z-20">
                <div className="absolute top-[20%] left-1/2 grid -translate-x-1/2 content-start justify-items-center gap-6 text-center text-foreground">
                     <span className="relative max-w-[15ch] text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-linear-to-b after:from-foreground after:to-transparent after:content-['']">
                          unbeatable value

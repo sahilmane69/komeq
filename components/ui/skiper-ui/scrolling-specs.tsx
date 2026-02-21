@@ -44,7 +44,7 @@ const ProgressiveBlur = ({
 
 export const ScrollingSpecs = () => {
      return (
-          <div className="relative w-full bg-background -mt-[15vh] z-20">
+          <div className="relative w-full bg-transparent -mt-[15vh] z-20">
                <ProgressiveBlur position="top" height="200px" blurAmount="12px" />
 
                <div className="relative w-full flex flex-col items-center">

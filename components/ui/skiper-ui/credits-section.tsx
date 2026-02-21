@@ -4,7 +4,7 @@ import React from "react";
 
 export const CreditsContext = () => {
      return (
-          <div className="relative flex min-h-[60vh] w-full flex-col justify-center bg-background text-foreground z-10 overflow-hidden">
+          <div className="relative flex min-h-[60vh] w-full flex-col justify-center bg-transparent text-foreground z-10 overflow-hidden">
                {/* Content Container */}
                <div className="relative z-20 mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-16 px-6 py-24 md:flex-row">
 

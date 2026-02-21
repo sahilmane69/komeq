@@ -122,7 +122,25 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, #fff0f5, #ffe4e6, #fce7f3, #fff1f2);
+    background-size: 300% 300%;
+    animation: seamlessGradient 20s ease infinite;
+    background-attachment: fixed;
+    @apply text-foreground min-h-screen relative;
+  }
+  
+  .dark body {
+    background: linear-gradient(135deg, #1f0310, #0a0004, #2a031e, #0c0004);
+    background-size: 300% 300%;
+    animation: seamlessGradient 20s ease infinite;
+    background-attachment: fixed;
+    @apply text-foreground min-h-screen relative;
+  }
+  
+  @keyframes seamlessGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
   
   ::selection {
