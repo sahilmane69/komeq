@@ -157,7 +157,7 @@ export const ShowcaseVideo = () => {
                          opacity.set(0);
                     }}
                     onClick={() => setShowVideoPopOver(true)}
-                    className="w-full max-w-5xl rounded-2xl overflow-hidden cursor-none relative z-20 shadow-2xl border border-white/10"
+                    className="w-full max-w-3xl rounded-2xl overflow-hidden cursor-none relative z-20 shadow-2xl border border-white/10"
                >
                     <motion.div
                          style={{ x, y, opacity }}
@@ -214,7 +214,7 @@ const VideoPopOver = ({
                          stiffness: 100,
                          damping: 20,
                     }}
-                    className="relative aspect-video w-[90vw] max-w-7xl rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(239,68,68,0.2)] border border-white/10"
+                    className="relative aspect-video w-[90vw] max-w-5xl rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(239,68,68,0.2)] border border-white/10"
                >
                     <VideoPlayer style={{ width: "100%", height: "100%" }}>
                          <VideoPlayerContent
@@ -231,7 +231,7 @@ const VideoPopOver = ({
                          >
                               <Plus className="size-6 rotate-45 text-white" />
                          </span>
-                         <VideoPlayerControlBar className="absolute bottom-4 left-1/2 flex w-[95%] max-w-7xl -translate-x-1/2 items-center justify-center px-5 rounded-xl bg-black/50 backdrop-blur-md md:px-10 md:py-2 border border-white/5">
+                         <VideoPlayerControlBar className="absolute bottom-4 left-1/2 flex w-[95%] max-w-5xl -translate-x-1/2 items-center justify-center px-5 rounded-xl bg-black/50 backdrop-blur-md md:px-10 md:py-2 border border-white/5">
                               <VideoPlayerPlayButton className="h-6 bg-transparent hover:text-red-500 transition-colors" />
                               <VideoPlayerTimeRange className="bg-transparent text-red-500" />
                               <VideoPlayerMuteButton className="size-6 bg-transparent hover:text-red-500 transition-colors" />
