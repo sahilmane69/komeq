@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -70,7 +70,7 @@ const CharacterV2 = ({
      return (
           <motion.img
                src={char}
-               className={cn("inline-block", isSpace && "w-4")}
+               className={cn("inline-block h-12 md:h-20 w-auto object-contain mx-2 md:mx-4", isSpace && "w-4")}
                style={{
                     x,
                     scale,
@@ -110,7 +110,7 @@ const CharacterV3 = ({
      return (
           <motion.img
                src={char}
-               className={cn("inline-block", isSpace && "w-4")}
+               className={cn("inline-block h-12 md:h-20 w-auto object-contain mx-2 md:mx-4", isSpace && "w-4")}
                style={{
                     x,
                     rotate,
@@ -136,6 +136,13 @@ export const Skiper31 = () => {
      const { scrollYProgress: scrollYProgress3 } = useScroll({
           target: targetRef3,
      });
+
+     const [isMounted, setIsMounted] = useState(false);
+     useEffect(() => {
+          requestAnimationFrame(() => setIsMounted(true));
+     }, []);
+
+     if (!isMounted) return null;
 
      const text = "powered by komeq & arduino";
      const characters = text.split("");
