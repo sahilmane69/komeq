@@ -93,7 +93,7 @@ export const FooterBasic = () => {
                          &quot;See U at IPU&quot; is a collaborative project where the website design and front-end structure were created by{" "}
                          <AnimatedLink href="https://sahilmane-one.vercel.app" className="inline-flex! px-1 py-0! font-orbitron text-foreground text-xs md:text-sm uppercase tracking-widest before:hover:h-full!">Sahil Mane</AnimatedLink>,
                          focusing on a clean, user-friendly interface and smooth user experience. The intelligent model and backend logic were developed by{" "}
-                         <AnimatedLink href="https://linkedin.com/in/himanshu-kumar-singh-629618214" className="inline-flex! px-1 py-0! font-orbitron text-foreground text-xs md:text-sm uppercase tracking-widest before:hover:h-full!">Himanshu Kumar Singh</AnimatedLink>,
+                         <AnimatedLink href="https://instagram.com/midnighttoast097" className="inline-flex! px-1 py-0! font-orbitron text-foreground text-xs md:text-sm uppercase tracking-widest before:hover:h-full!">Himanshu Kumar Singh</AnimatedLink>,
                          enabling accurate processing and functionality. Together, the project combines thoughtful design with a robust model to deliver a practical and effective solution.
                     </div>
 
