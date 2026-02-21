@@ -1,40 +1,75 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+
+const RealTimeClock = () => {
+     const [time, setTime] = useState("");
+
+     useEffect(() => {
+          const updateTime = () => {
+               const now = new Date();
+               const year = now.getFullYear();
+               const month = String(now.getMonth() + 1).padStart(2, "0");
+               const day = String(now.getDate()).padStart(2, "0");
+               const hours = String(now.getHours()).padStart(2, "0");
+               const minutes = String(now.getMinutes()).padStart(2, "0");
+               setTime(`${year}/${month}/${day} (${hours}:${minutes})`);
+          };
+          updateTime();
+          const interval = setInterval(updateTime, 1000);
+          return () => clearInterval(interval);
+     }, []);
+
+     return (
+          <div className="font-orbitron font-medium text-xs md:text-sm text-foreground/50 tracking-widest tabular-nums">
+               {time}
+          </div>
+     );
+};
 
 export const FooterBasic = () => {
      return (
-          <footer className="w-full bg-transparent border-t border-white/5 py-12 z-20 relative">
-               <div className="mx-auto flex max-w-6xl flex-col items-center justify-center gap-4 px-4 text-center md:flex-row md:justify-between">
-                    <p className="flex items-center justify-center gap-2 text-sm text-foreground/50 flex-wrap">
-                         © 2026 <img src="/image.png" alt=" Logo" className="h-5 w-5 object-cover rounded-md mx-1" /> <span className="font-orbitron font-semibold text-base">KOMEQ<span className="text-red-500 font-bold pl-0.5 pr-0.5">[R]</span></span> Self Balancing Product. All rights reserved.
-                    </p>
-                    <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-foreground/50">
-                         <div className="flex items-center gap-3">
-                              <Link href="https://github.com/sahilmane69" target="_blank" className="flex items-center gap-1.5 font-medium text-foreground hover:text-foreground/80 transition-colors">
-                                   <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                                   </svg>
-                                   GitHub
-                              </Link>
-                              <span className="opacity-40">•</span>
-                              <Link href="https://linkedin.com/in/sahilmane74" target="_blank" className="flex items-center gap-1.5 font-medium text-foreground hover:text-foreground/80 transition-colors">
-                                   <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                                   </svg>
-                                   LinkedIn
-                              </Link>
-                         </div>
-                         <span className="hidden md:inline-block opacity-40">|</span>
-                         <span className="flex items-center gap-1">
-                              Built with precision by{" "}
-                              <Link
-                                   href="https://sahilmane-one.vercel.app"
-                                   target="_blank"
-                                   className="font-medium text-foreground hover:underline"
-                              >
-                                   Sahil Mane
-                              </Link>
-                         </span>
+          <footer className="w-full bg-transparent border-t border-foreground/10 py-12 px-8 md:px-16 lg:px-24 z-20 relative min-h-[50vh] flex flex-col justify-between selection:bg-red-500 selection:text-white">
+
+               {/* Faint corner crosshairs inside the padding bounds */}
+               <div className="absolute top-12 left-8 md:left-16 lg:left-24 text-foreground/20 text-sm font-light pointer-events-none leading-none">+</div>
+               <div className="absolute bottom-12 left-8 md:left-16 lg:left-24 text-foreground/20 text-sm font-light pointer-events-none leading-none">+</div>
+               <div className="absolute bottom-12 right-8 md:right-16 lg:right-24 text-foreground/20 text-sm font-light pointer-events-none leading-none">+</div>
+
+               {/* Top Section */}
+               <div className="flex w-full justify-end">
+                    <RealTimeClock />
+               </div>
+
+               {/* Middle Section */}
+               <div className="flex w-full items-center justify-between mt-auto mb-20 md:mb-32 relative z-10 px-0">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-foreground/90">
+                         See you on the canvas.
+                    </h2>
+
+                    {/* The 3 Dots Panel */}
+                    <div className="flex items-center gap-2">
+                         <div className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 rounded-full bg-yellow-500 shadow-[0_0_10px_2px_rgba(234,179,8,0.3)]" />
+                         <div className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 rounded-full bg-foreground shadow-[0_0_10px_2px_rgba(255,255,255,0.2)]" />
+                         <div className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 rounded-full bg-foreground/20" />
+                    </div>
+               </div>
+
+               {/* Bottom Section */}
+               <div className="flex flex-col lg:flex-row w-full items-start lg:items-end justify-between gap-12 lg:gap-0 relative z-10 px-0 pb-2">
+                    {/* Brand */}
+                    <div className="font-orbitron font-semibold text-lg md:text-xl text-foreground/70 hover:text-foreground transition-colors tracking-widest uppercase flex items-center">
+                         KOMEQ<span className="text-red-500 font-bold ml-1 tracking-normal">[R]</span>
+                    </div>
+
+                    {/* Links */}
+                    <div className="flex flex-wrap items-center gap-4 md:gap-8 text-[10px] md:text-[11px] text-foreground/30 font-bold uppercase tracking-[0.2em]">
+                         <Link href="#" className="hover:text-foreground transition-colors duration-300">Terms of Service</Link>
+                         <Link href="#" className="hover:text-foreground transition-colors duration-300">Privacy Policy</Link>
+                         <Link href="https://linkedin.com/in/sahilmane74" target="_blank" className="hover:text-foreground transition-colors duration-300">LinkedIn</Link>
+                         <Link href="https://github.com/sahilmane69" target="_blank" className="hover:text-foreground transition-colors duration-300">GitHub</Link>
+                         <Link href="https://sahilmane-one.vercel.app" target="_blank" className="hover:text-foreground transition-colors duration-300">Portfolio</Link>
                     </div>
                </div>
           </footer>
