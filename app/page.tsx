@@ -3,7 +3,7 @@ import { HeroText } from "@/components/ui/skiper-ui/hero-text";
 import { StickyCards } from "@/components/ui/skiper-ui/sticky-cards";
 import { ScrollingSpecs } from "@/components/ui/skiper-ui/scrolling-specs";
 import { AnimatedPrice } from "@/components/ui/skiper-ui/animated-price";
-import { CrowdCanvas } from "@/components/ui/skiper-ui/crowd-canvas";
+import { CreditsContext } from "@/components/ui/skiper-ui/credits-section";
 import { FooterBasic } from "@/components/ui/skiper-ui/footer-basic";
 import { BotDisplay } from "@/components/ui/skiper-ui/bot-display";
 import ReactLenis from "lenis/react";
@@ -18,7 +18,7 @@ export default function Home() {
         <AnimatedPrice />
         <StickyCards />
         <BotDisplay />
-        <CrowdCanvas />
+        <CreditsContext />
         <FooterBasic />
       </div>
     </ReactLenis>
