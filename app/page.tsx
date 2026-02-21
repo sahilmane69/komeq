@@ -5,12 +5,14 @@ import { KomeqScrollingSpecs } from "@/components/ui/skiper-ui/komeq-scrolling-s
 import { KomeqAnimatedPrice } from "@/components/ui/skiper-ui/komeq-animated-price";
 import { KomeqCrowdCanvas } from "@/components/ui/skiper-ui/komeq-crowd-canvas";
 import { KomeqFooterBasic } from "@/components/ui/skiper-ui/komeq-footer-basic";
+import { KomeqScrollLine } from "@/components/ui/skiper-ui/komeq-scroll-line";
 import ReactLenis from "lenis/react";
 
 export default function Home() {
   return (
     <ReactLenis root>
       <div className="relative min-h-[300vh] w-full bg-background font-sans text-foreground overflow-hidden">
+        <KomeqScrollLine />
         <Skiper40 />
         <KomeqHeroText />
         <KomeqStickyCards />
