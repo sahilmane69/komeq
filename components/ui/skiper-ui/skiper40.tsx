@@ -100,7 +100,7 @@ const Skiper58 = ({ onClose }: { onClose: () => void }) => {
               <a href={item.href}>
                 <TextRoll
                   center
-                  className="text-4xl font-extrabold uppercase leading-[0.8] tracking-[-0.03em] transition-colors hover:text-red-500 md:text-6xl"
+                  className="font-orbitron text-4xl font-extrabold uppercase leading-[0.8] tracking-[-0.03em] transition-colors hover:text-red-500 md:text-6xl"
                 >
                   {item.name}
                 </TextRoll>
@@ -460,7 +460,7 @@ const Skiper40 = () => {
               className="h-10 w-10 object-cover"
             />
           </div>
-          <span className="hidden ml-3 font-semibold text-foreground sm:flex sm:items-center">
+          <span className="hidden ml-3 font-orbitron font-semibold text-foreground sm:flex sm:items-center">
             KOMEQ<span className="text-red-500 font-bold pl-1">[R]</span>
           </span>
         </div>

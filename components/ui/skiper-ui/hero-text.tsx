@@ -36,7 +36,7 @@ export const HeroText = () => {
                               opacity: opacityValue,
                               filter: blurValue
                          }}
-                         className="font-geist relative w-full max-w-4xl px-4 text-center text-xl sm:text-2xl font-semibold leading-relaxed sm:leading-snug tracking-tight text-foreground/90 md:text-4xl lg:text-5xl"
+                         className="font-orbitron relative w-full max-w-4xl px-4 text-center text-xl sm:text-2xl font-semibold leading-relaxed sm:leading-snug tracking-tight text-foreground/90 md:text-4xl lg:text-5xl"
                     >
                          KOMEQ<span className="text-red-500 font-bold pl-1 pr-1">[R]</span>continuously senses every move, reading angles, motion, and gravity in real-time.
                          <br />

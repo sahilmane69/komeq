@@ -10,7 +10,7 @@ export const CreditsContext = () => {
 
                     {/* Left text section */}
                     <div className="flex-1 text-center md:text-left">
-                         <h2 className="font-geist text-3xl sm:text-4xl font-bold tracking-tighter md:text-6xl lg:text-7xl">
+                         <h2 className="font-orbitron text-3xl sm:text-4xl font-bold tracking-tighter md:text-6xl lg:text-7xl">
                               Made Possible By <br /> <span className="text-foreground/40">Our Team</span>
                          </h2>
                          <p className="mt-6 max-w-lg text-sm text-foreground/50 md:text-base leading-relaxed">
