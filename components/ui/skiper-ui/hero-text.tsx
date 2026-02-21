@@ -3,7 +3,7 @@
 import { motion, useMotionTemplate, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 
-export const KomeqHeroText = () => {
+export const HeroText = () => {
      const targetRef = useRef<HTMLDivElement | null>(null);
      const { scrollYProgress } = useScroll({
           target: targetRef,

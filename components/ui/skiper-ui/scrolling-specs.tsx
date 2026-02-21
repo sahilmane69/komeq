@@ -42,7 +42,7 @@ const ProgressiveBlur = ({
      );
 };
 
-export const KomeqScrollingSpecs = () => {
+export const ScrollingSpecs = () => {
      return (
           <div className="relative w-full bg-background -mt-[15vh] z-20">
                <ProgressiveBlur position="top" height="200px" blurAmount="12px" />

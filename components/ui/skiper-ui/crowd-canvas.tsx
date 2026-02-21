@@ -283,7 +283,7 @@ const CrowdCanvas = ({ src, rows = 15, cols = 7 }: CrowdCanvasProps) => {
      );
 };
 
-export const KomeqCrowdCanvas = () => {
+export const CrowdCanvas = () => {
      return (
           <div className="relative flex min-h-[60vh] w-full flex-col justify-center bg-background text-foreground z-10 overflow-hidden">
                {/* Content Container */}

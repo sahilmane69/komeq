@@ -5,7 +5,7 @@ import { animate, useMotionValue } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-export function KomeqAnimatedPrice() {
+export function AnimatedPrice() {
      const [displayValue, setDisplayValue] = useState(0);
      const count = useMotionValue(0);
      const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.5 });

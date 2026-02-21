@@ -129,7 +129,7 @@ const StickyCard002 = ({
      );
 };
 
-export const KomeqStickyCards = () => {
+export const StickyCards = () => {
      return (
           <div className="relative z-10 w-full -mt-[20vh]">
                <div className="pointer-events-none h-[10vh] w-full bg-linear-to-b from-transparent to-background" />

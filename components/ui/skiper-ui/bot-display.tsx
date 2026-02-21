@@ -10,7 +10,7 @@ const SPRING = {
      stiffness: 131,
 };
 
-export const KomeqBotDisplay = () => {
+export const BotDisplay = () => {
      const xSpring = useSpring(0, SPRING);
      const ySpring = useSpring(0, SPRING);
      const opacitySpring = useSpring(0, SPRING);

@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
  * Animated SVG line that draws itself as the user scrolls down the page.
  * Adapted from Skiper 19, tweaked to fit full page background scaling.
  */
-export const KomeqScrollLine = ({ className }: { className?: string }) => {
+export const ScrollLine = ({ className }: { className?: string }) => {
      // Track scroll progress of the entire page
      const { scrollYProgress } = useScroll();
 
