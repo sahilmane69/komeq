@@ -74,10 +74,11 @@ const TextRoll: React.FC<{
 
 // --- Skiper58 Menu Component ---
 const navigationItems = [
-  { name: "Home", href: "/", description: "[0]" },
-  { name: "About", href: "/about", description: "[1]" },
-  { name: "Specs", href: "/specs", description: "[2]" },
-  { name: "Credits", href: "/credits", description: "[3]" },
+  { name: "Home", href: "#", description: "[0]" },
+  { name: "About", href: "#about", description: "[1]" },
+  { name: "Price", href: "#price", description: "[2]" },
+  { name: "Specs", href: "#specs", description: "[3]" },
+  { name: "Credits", href: "#credits", description: "[4]" },
 ];
 
 const Skiper58 = ({ onClose }: { onClose: () => void }) => {
@@ -96,12 +97,14 @@ const Skiper58 = ({ onClose }: { onClose: () => void }) => {
             key={index}
           >
             <div className="relative flex items-start" onClick={onClose}>
-              <TextRoll
-                center
-                className="text-4xl font-extrabold uppercase leading-[0.8] tracking-[-0.03em] transition-colors md:text-6xl"
-              >
-                {item.name}
-              </TextRoll>
+              <a href={item.href}>
+                <TextRoll
+                  center
+                  className="text-4xl font-extrabold uppercase leading-[0.8] tracking-[-0.03em] transition-colors md:text-6xl"
+                >
+                  {item.name}
+                </TextRoll>
+              </a>
             </div>
           </li>
         ))}

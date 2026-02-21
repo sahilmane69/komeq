@@ -14,11 +14,24 @@ export default function Home() {
       <div className="relative min-h-[300vh] w-full bg-background font-sans text-foreground overflow-hidden">
         <Skiper40 />
         <HeroText />
-        <ScrollingSpecs />
-        <AnimatedPrice />
-        <StickyCards />
-        <BotDisplay />
-        <CreditsContext />
+
+        <div id="about">
+          <ScrollingSpecs />
+        </div>
+
+        <div id="price">
+          <AnimatedPrice />
+        </div>
+
+        <div id="specs">
+          <StickyCards />
+          <BotDisplay />
+        </div>
+
+        <div id="credits">
+          <CreditsContext />
+        </div>
+
         <FooterBasic />
       </div>
     </ReactLenis>
