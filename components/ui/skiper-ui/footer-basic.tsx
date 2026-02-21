@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Github, Linkedin } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { CrowdCanvas } from "./crowd-canvas";
 
 const AnimatedLink = ({
      children,
@@ -91,7 +92,7 @@ export const FooterBasic = () => {
                <div className="flex w-full items-center justify-between mt-auto mb-20 md:mb-32 relative z-10 px-0">
                     <div className="text-sm md:text-base tracking-wide text-foreground/70 max-w-2xl lg:max-w-4xl leading-relaxed mt-4 md:mt-0 px-0 md:px-4">
                          <div className="mb-4 md:mb-6">
-                              <AnimatedLink href="#" className="inline-flex! px-1 py-0! font-orbitron text-foreground text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-[0.1em] drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] before:hover:h-full!">SEE U AT IPUB</AnimatedLink>
+                              <span className="inline-flex px-1 py-0 font-orbitron text-foreground text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-widest drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">SEE U AT IPUB</span>
                          </div>
                          is a collaborative project where the website design and front-end structure were created by{" "}
                          <span className="relative group/sahil inline-block cursor-help">
@@ -102,9 +103,6 @@ export const FooterBasic = () => {
                                         <div className="font-orbitron text-[10px] sm:text-xs text-foreground/80 leading-relaxed text-center tracking-wider">
                                              <span className="text-white font-bold block mb-1 uppercase">Full Stack Developer</span>
                                              <span>from Pune • ADYPU B.Tech CS</span>
-                                             <span className="block mt-2 text-red-500 font-bold uppercase text-[9px] sm:text-[10px] tracking-widest">
-                                                  [ Something Cool & Badass ]
-                                             </span>
                                         </div>
                                         <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-black/90 border-b border-r border-white/10 rotate-45" />
                                    </div>
@@ -139,6 +137,11 @@ export const FooterBasic = () => {
                               <Linkedin className="size-5 md:size-6" />
                          </Link>
                     </div>
+               </div>
+
+               {/* Add Crowd Canvas Effect */}
+               <div className="absolute bottom-0 left-0 w-full h-[50vh] pointer-events-none z-0">
+                    <CrowdCanvas src="/images/peeps/all-peeps.png" rows={15} cols={7} />
                </div>
           </footer>
      );
