@@ -68,7 +68,7 @@ const RealTimeClock = () => {
      }, []);
 
      return (
-          <div className="font-orbitron font-medium text-xs md:text-sm text-foreground/50 tracking-widest tabular-nums">
+          <div className="font-medium text-xs md:text-sm text-foreground/50 tracking-widest tabular-nums" style={{ fontFamily: "var(--font-dot)" }}>
                {time}
           </div>
      );
@@ -90,13 +90,13 @@ export const FooterBasic = () => {
 
                {/* Middle Section */}
                <div className="flex w-full items-center justify-between mt-auto mb-20 md:mb-32 relative z-10 px-0">
-                    <div className="text-xs md:text-sm tracking-wide text-foreground/50 max-w-2xl lg:max-w-4xl leading-relaxed mt-4 md:mt-0 px-0 md:px-4">
+                    <div className="text-[10px] md:text-xs tracking-wider text-foreground/50 max-w-2xl lg:max-w-3xl leading-relaxed mt-4 md:mt-0 px-0 md:px-4 text-justify">
                          <div className="mb-2 md:mb-4">
-                              <span className="inline-flex px-1 py-0 text-foreground text-base md:text-lg lg:text-xl font-medium uppercase tracking-widest opacity-80">SEE U AT IPUB</span>
+                              <span className="inline-flex px-1 py-0 text-foreground text-lg md:text-2xl lg:text-3xl font-bold uppercase tracking-widest opacity-90 drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]">SEE U AT IPUB</span>
                          </div>
                          is a collaborative project where the website design and front-end structure were created by{" "}
-                         <span className="relative group/sahil inline-block cursor-help">
-                              <AnimatedLink href="https://sahilmane-one.vercel.app" className="inline-flex! px-1 py-0! text-foreground font-medium text-xs md:text-sm uppercase tracking-wider before:hover:h-full!">Sahil Mane</AnimatedLink>
+                         <span className="relative group/sahil inline-block cursor-help mx-1">
+                              <AnimatedLink href="https://sahilmane-one.vercel.app" className="inline-flex! px-1 py-0! text-foreground font-semibold text-[10px] md:text-xs uppercase tracking-widest before:hover:h-full!">SAHIL MANE</AnimatedLink>
 
                               <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 pointer-events-none opacity-0 group-hover/sahil:opacity-100 transition-all duration-300 translate-y-2 group-hover/sahil:translate-y-0 z-50 w-max max-w-[280px] sm:max-w-[350px]">
                                    <div className="relative bg-black/90 backdrop-blur-xl border border-white/10 p-4 rounded-xl shadow-[0_0_30px_rgba(255,255,255,0.05)]">
@@ -109,14 +109,14 @@ export const FooterBasic = () => {
                               </div>
                          </span>,
                          focusing on a clean, user-friendly interface and smooth user experience. The intelligent model and backend logic were developed by{" "}
-                         <span className="relative group/himanshu inline-block cursor-help">
-                              <AnimatedLink href="https://instagram.com/midnighttoast097" className="inline-flex! px-1 py-0! text-foreground font-medium text-xs md:text-sm uppercase tracking-wider before:hover:h-full!">Himanshu Kumar Singh</AnimatedLink>
+                         <span className="relative group/himanshu inline-block cursor-help mx-1">
+                              <AnimatedLink href="https://instagram.com/midnighttoast097" className="inline-flex! px-1 py-0! text-foreground font-semibold text-[10px] md:text-xs uppercase tracking-widest before:hover:h-full!">HIMANSHU KUMAR SINGH</AnimatedLink>
 
                               <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 pointer-events-none opacity-0 group-hover/himanshu:opacity-100 transition-all duration-300 translate-y-2 group-hover/himanshu:translate-y-0 z-50 w-max max-w-[280px] sm:max-w-[350px]">
                                    <div className="relative bg-black/90 backdrop-blur-xl border border-white/10 p-4 rounded-xl shadow-[0_0_30px_rgba(255,255,255,0.05)]">
                                         <div className="text-[10px] sm:text-xs text-foreground/80 leading-relaxed text-center tracking-wider">
                                              <span className="text-white font-bold block mb-1 uppercase tracking-widest text-xs">Supporting Developer</span>
-                                             <span className="opacity-70">IoT Master</span>
+                                             <span className="opacity-70">IoT Master<br />from Jamshedpur, Jharkhand</span>
                                         </div>
                                         <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-black/90 border-b border-r border-white/10 rotate-45" />
                                    </div>
@@ -134,7 +134,7 @@ export const FooterBasic = () => {
                </div>
 
                {/* Bottom Section */}
-               <div className="flex flex-col lg:flex-row w-full items-start lg:items-end justify-between gap-12 lg:gap-0 relative z-10 px-0 pb-2">
+               <div className="flex flex-col lg:flex-row w-full items-start lg:items-end justify-between gap-12 lg:gap-0 relative z-10 px-0 pb-8 md:pb-12 mix-blend-exclusion">
                     {/* Brand */}
                     <div className="font-orbitron font-semibold text-lg md:text-xl text-foreground/70 hover:text-foreground transition-colors tracking-widest uppercase flex items-center">
                          KOMEQ<span className="text-red-500 font-bold ml-1 tracking-normal">[R]</span>

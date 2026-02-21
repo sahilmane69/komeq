@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
-import { Rajdhani, Orbitron, Geist_Mono } from "next/font/google";
+import { Rajdhani, Orbitron, Geist_Mono, DotGothic16 } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
+
+const dotGothic = DotGothic16({
+  variable: "--font-dot",
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const rajdhani = Rajdhani({
   variable: "--font-geist-sans",
@@ -77,7 +83,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${rajdhani.variable} ${orbitron.variable} ${geistMono.variable} antialiased`}
+        className={`${rajdhani.variable} ${orbitron.variable} ${geistMono.variable} ${dotGothic.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
