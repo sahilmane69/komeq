@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { Github, Linkedin } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const AnimatedLink = ({
@@ -88,9 +89,13 @@ export const FooterBasic = () => {
 
                {/* Middle Section */}
                <div className="flex w-full items-center justify-between mt-auto mb-20 md:mb-32 relative z-10 px-0">
-                    <h2 className="text-sm md:text-base lg:text-lg font-medium tracking-wide text-foreground/70 font-orbitron uppercase">
-                         <AnimatedLink href="https://sahilmane-one.vercel.app">website by sahil mane</AnimatedLink>
-                    </h2>
+                    <div className="text-sm md:text-base tracking-wide text-foreground/70 max-w-2xl leading-relaxed mt-4 md:mt-0 px-0 md:px-4">
+                         &quot;See U at IPU&quot; is a collaborative project where the website design and front-end structure were created by{" "}
+                         <AnimatedLink href="https://sahilmane-one.vercel.app" className="inline-flex! px-1 py-0! font-orbitron text-foreground text-xs md:text-sm uppercase tracking-widest before:hover:h-full!">Sahil Mane</AnimatedLink>,
+                         focusing on a clean, user-friendly interface and smooth user experience. The intelligent model and backend logic were developed by{" "}
+                         <AnimatedLink href="https://linkedin.com/in/himanshu-kumar-singh-629618214" className="inline-flex! px-1 py-0! font-orbitron text-foreground text-xs md:text-sm uppercase tracking-widest before:hover:h-full!">Himanshu Kumar Singh</AnimatedLink>,
+                         enabling accurate processing and functionality. Together, the project combines thoughtful design with a robust model to deliver a practical and effective solution.
+                    </div>
 
                     {/* The 3 Dots Panel */}
                     <div className="flex items-center gap-2">
@@ -108,12 +113,13 @@ export const FooterBasic = () => {
                     </div>
 
                     {/* Links */}
-                    <div className="flex flex-wrap items-center gap-4 md:gap-8 text-[10px] md:text-[11px] text-foreground/30 font-bold uppercase tracking-[0.2em]">
-                         <Link href="#" className="hover:text-foreground transition-colors duration-300">Terms of Service</Link>
-                         <Link href="#" className="hover:text-foreground transition-colors duration-300">Privacy Policy</Link>
-                         <Link href="https://linkedin.com/in/sahilmane74" target="_blank" className="hover:text-foreground transition-colors duration-300">LinkedIn</Link>
-                         <Link href="https://github.com/sahilmane69" target="_blank" className="hover:text-foreground transition-colors duration-300">GitHub</Link>
-                         <Link href="https://sahilmane-one.vercel.app" target="_blank" className="hover:text-foreground transition-colors duration-300">Portfolio</Link>
+                    <div className="flex flex-wrap items-center gap-6 text-foreground/50">
+                         <Link href="https://github.com/sahilmane69" target="_blank" className="hover:text-foreground transition-colors duration-300">
+                              <Github className="size-5 md:size-6" />
+                         </Link>
+                         <Link href="https://linkedin.com/in/sahilmane74" target="_blank" className="hover:text-foreground transition-colors duration-300">
+                              <Linkedin className="size-5 md:size-6" />
+                         </Link>
                     </div>
                </div>
           </footer>
