@@ -152,7 +152,13 @@ export const FooterBasic = () => {
                </div>
 
                {/* Add Crowd Canvas Effect */}
-               <div className="absolute -bottom-8 md:-bottom-12 left-0 w-full h-[50vh] pointer-events-none z-0">
+               <div
+                    className="absolute -bottom-8 md:-bottom-12 left-0 w-full h-[50vh] pointer-events-none z-0"
+                    style={{
+                         maskImage: "linear-gradient(to bottom, transparent, black 20%)",
+                         WebkitMaskImage: "linear-gradient(to bottom, transparent, black 20%)"
+                    }}
+               >
                     <CrowdCanvas src="/images/peeps/all-peeps.png" rows={15} cols={7} />
                </div>
           </footer>
