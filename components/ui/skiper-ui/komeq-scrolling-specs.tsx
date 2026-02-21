@@ -24,7 +24,7 @@ const ProgressiveBlur = ({
           <div
                className={cn(
                     "pointer-events-none sticky z-20 w-full select-none",
-                    isTop ? "top-0 bg-gradient-to-b from-background to-transparent" : "bottom-0 bg-gradient-to-t from-background to-transparent",
+                    isTop ? "top-0 bg-linear-to-b from-background to-transparent" : "bottom-0 bg-linear-to-t from-background to-transparent",
                     className
                )}
                style={{
@@ -44,11 +44,11 @@ const ProgressiveBlur = ({
 
 export const KomeqScrollingSpecs = () => {
      return (
-          <div className="relative w-full bg-background mt-4 z-20">
+          <div className="relative w-full bg-background -mt-[15vh] z-20">
                <ProgressiveBlur position="top" height="200px" blurAmount="12px" />
 
                <div className="relative w-full flex flex-col items-center">
-                    <div className="w-full max-w-5xl space-y-12 px-6 py-[50vh] text-justify font-geist text-2xl font-medium leading-[1.8] tracking-tight md:text-3xl lg:text-4xl lg:leading-[1.6] md:px-12 text-foreground">
+                    <div className="w-full max-w-5xl space-y-12 px-6 py-[15vh] text-justify font-geist text-2xl font-medium leading-[1.8] tracking-tight md:text-3xl lg:text-4xl lg:leading-[1.6] md:px-12 text-foreground">
                          <p>
                               The KOMEQ large-scale self-balancing product is designed and
                               developed using an Arduino microcontroller as the brain of the

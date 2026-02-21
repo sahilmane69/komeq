@@ -47,7 +47,7 @@ const StickyCard002 = ({
                const scrollTimeline = gsap.timeline({
                     scrollTrigger: {
                          trigger: ".sticky-cards",
-                         start: "top top",
+                         start: "center center",
                          end: `+=${window.innerHeight * (totalCards - 1)}`,
                          pin: true,
                          scrub: 0.5,
