@@ -88,8 +88,8 @@ export const FooterBasic = () => {
 
                {/* Middle Section */}
                <div className="flex w-full items-center justify-between mt-auto mb-20 md:mb-32 relative z-10 px-0">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-foreground/90 font-orbitron uppercase">
-                         <AnimatedLink href="https://sahilmane-one.vercel.app">by sahil mane</AnimatedLink>
+                    <h2 className="text-sm md:text-base lg:text-lg font-medium tracking-wide text-foreground/70 font-orbitron uppercase">
+                         <AnimatedLink href="https://sahilmane-one.vercel.app">website by sahil mane</AnimatedLink>
                     </h2>
 
                     {/* The 3 Dots Panel */}
