@@ -16,7 +16,7 @@ export const KomeqScrollLine = ({ className }: { className?: string }) => {
      const pathLength = useTransform(scrollYProgress, [0, 1], [0.0, 1]);
 
      return (
-          <div className={cn("pointer-events-none absolute inset-0 z-0 flex justify-center overflow-hidden opacity-20 dark:opacity-40", className)}>
+          <div className={cn("pointer-events-none fixed inset-0 z-0 flex justify-center overflow-hidden opacity-20 dark:opacity-40", className)}>
                <svg
                     width="1278"
                     height="3500" // Stretched vertically to cover more page height
@@ -33,6 +33,7 @@ export const KomeqScrollLine = ({ className }: { className?: string }) => {
                          strokeLinecap="round"
                          style={{
                               pathLength,
+                              strokeDashoffset: useTransform(pathLength, (value) => 1 - value),
                          }}
                     />
                </svg>
