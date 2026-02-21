@@ -90,26 +90,38 @@ export const FooterBasic = () => {
 
                {/* Middle Section */}
                <div className="flex w-full items-center justify-between mt-auto mb-20 md:mb-32 relative z-10 px-0">
-                    <div className="text-sm md:text-base tracking-wide text-foreground/70 max-w-2xl lg:max-w-4xl leading-relaxed mt-4 md:mt-0 px-0 md:px-4">
-                         <div className="mb-4 md:mb-6">
-                              <span className="inline-flex px-1 py-0 font-orbitron text-foreground text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-widest drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">SEE U AT IPUB</span>
+                    <div className="text-xs md:text-sm tracking-wide text-foreground/50 max-w-2xl lg:max-w-4xl leading-relaxed mt-4 md:mt-0 px-0 md:px-4">
+                         <div className="mb-2 md:mb-4">
+                              <span className="inline-flex px-1 py-0 text-foreground text-base md:text-lg lg:text-xl font-medium uppercase tracking-widest opacity-80">SEE U AT IPUB</span>
                          </div>
                          is a collaborative project where the website design and front-end structure were created by{" "}
                          <span className="relative group/sahil inline-block cursor-help">
-                              <AnimatedLink href="https://sahilmane-one.vercel.app" className="inline-flex! px-1 py-0! font-orbitron text-foreground text-xs md:text-sm uppercase tracking-widest before:hover:h-full!">Sahil Mane</AnimatedLink>
+                              <AnimatedLink href="https://sahilmane-one.vercel.app" className="inline-flex! px-1 py-0! text-foreground font-medium text-xs md:text-sm uppercase tracking-wider before:hover:h-full!">Sahil Mane</AnimatedLink>
 
                               <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 pointer-events-none opacity-0 group-hover/sahil:opacity-100 transition-all duration-300 translate-y-2 group-hover/sahil:translate-y-0 z-50 w-max max-w-[280px] sm:max-w-[350px]">
-                                   <div className="relative bg-black/90 backdrop-blur-xl border border-white/10 p-4 rounded-xl shadow-[0_0_30px_rgba(239,68,68,0.2)]">
-                                        <div className="font-orbitron text-[10px] sm:text-xs text-foreground/80 leading-relaxed text-center tracking-wider">
-                                             <span className="text-white font-bold block mb-1 uppercase">Full Stack Developer</span>
-                                             <span>from Pune • ADYPU B.Tech CS</span>
+                                   <div className="relative bg-black/90 backdrop-blur-xl border border-white/10 p-4 rounded-xl shadow-[0_0_30px_rgba(255,255,255,0.05)]">
+                                        <div className="text-[10px] sm:text-xs text-foreground/80 leading-relaxed text-center tracking-wider">
+                                             <span className="text-white font-bold block mb-1 uppercase tracking-widest text-xs">Full Stack Developer</span>
+                                             <span className="opacity-70">from Pune • ADYPU B.Tech CS</span>
                                         </div>
                                         <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-black/90 border-b border-r border-white/10 rotate-45" />
                                    </div>
                               </div>
                          </span>,
                          focusing on a clean, user-friendly interface and smooth user experience. The intelligent model and backend logic were developed by{" "}
-                         <AnimatedLink href="https://instagram.com/midnighttoast097" className="inline-flex! px-1 py-0! font-orbitron text-foreground text-xs md:text-sm uppercase tracking-widest before:hover:h-full!">Himanshu Kumar Singh</AnimatedLink>,
+                         <span className="relative group/himanshu inline-block cursor-help">
+                              <AnimatedLink href="https://instagram.com/midnighttoast097" className="inline-flex! px-1 py-0! text-foreground font-medium text-xs md:text-sm uppercase tracking-wider before:hover:h-full!">Himanshu Kumar Singh</AnimatedLink>
+
+                              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 pointer-events-none opacity-0 group-hover/himanshu:opacity-100 transition-all duration-300 translate-y-2 group-hover/himanshu:translate-y-0 z-50 w-max max-w-[280px] sm:max-w-[350px]">
+                                   <div className="relative bg-black/90 backdrop-blur-xl border border-white/10 p-4 rounded-xl shadow-[0_0_30px_rgba(255,255,255,0.05)]">
+                                        <div className="text-[10px] sm:text-xs text-foreground/80 leading-relaxed text-center tracking-wider">
+                                             <span className="text-white font-bold block mb-1 uppercase tracking-widest text-xs">Supporting Developer</span>
+                                             <span className="opacity-70">IoT Master</span>
+                                        </div>
+                                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-black/90 border-b border-r border-white/10 rotate-45" />
+                                   </div>
+                              </div>
+                         </span>,
                          enabling accurate processing and functionality. Together, the project combines thoughtful design with a robust model to deliver a practical and effective solution.
                     </div>
 
@@ -140,7 +152,7 @@ export const FooterBasic = () => {
                </div>
 
                {/* Add Crowd Canvas Effect */}
-               <div className="absolute bottom-0 left-0 w-full h-[50vh] pointer-events-none z-0">
+               <div className="absolute -bottom-8 md:-bottom-12 left-0 w-full h-[50vh] pointer-events-none z-0">
                     <CrowdCanvas src="/images/peeps/all-peeps.png" rows={15} cols={7} />
                </div>
           </footer>
