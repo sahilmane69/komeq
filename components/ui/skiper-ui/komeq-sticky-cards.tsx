@@ -105,7 +105,7 @@ const StickyCard002 = ({
                <div className="sticky-cards relative flex h-full w-full items-center justify-center overflow-hidden p-3 lg:p-8">
                     <div
                          className={cn(
-                              "relative h-[90vh] w-full max-w-sm overflow-hidden rounded-lg sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 2xl:max-w-3xl",
+                              "relative w-[90vw] max-w-5xl aspect-4/3 md:aspect-video overflow-hidden rounded-3xl shadow-2xl",
                               containerClassName,
                          )}
                     >
@@ -115,7 +115,7 @@ const StickyCard002 = ({
                                    src={card.image}
                                    alt={card.alt || ""}
                                    className={cn(
-                                        "rounded-4xl absolute h-full w-full object-cover",
+                                        "absolute top-0 left-0 h-full w-full object-cover rounded-3xl",
                                         imageClassName,
                                    )}
                                    ref={(el) => {
@@ -132,10 +132,9 @@ const StickyCard002 = ({
 export const KomeqStickyCards = () => {
      return (
           <div className="relative z-10 w-full -mt-[20vh]">
-               {/* Cinematic fade that overlaps the fading text */}
-               <div className="pointer-events-none h-[40vh] w-full bg-linear-to-b from-transparent to-background" />
+               <div className="pointer-events-none h-[10vh] w-full bg-linear-to-b from-transparent to-background" />
 
-               <div className="bg-background pb-10 pt-0">
+               <div className="bg-background pb-0 pt-0">
                     <StickyCard002
                          cards={[
                               { id: 1, image: "/komeqimg/image copy.png" },
@@ -145,6 +144,7 @@ export const KomeqStickyCards = () => {
                               { id: 5, image: "/komeqimg/image copy 5.png" },
                               { id: 6, image: "/komeqimg/image copy 6.png" },
                               { id: 7, image: "/komeqimg/image.png" },
+                              { id: 8, image: "/komeqimg/image copy 7.png" },
                          ]}
                     />
                </div>
