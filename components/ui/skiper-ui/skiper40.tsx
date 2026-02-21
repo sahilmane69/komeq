@@ -462,17 +462,17 @@ const Skiper40 = () => {
           </div>
           <span className="hidden ml-3 font-orbitron font-semibold text-foreground sm:flex sm:items-center tracking-wide">
             KOMEQ<span className="text-red-500 font-bold pl-0.5 tracking-normal">[R]</span>
-
-            {/* Realistic IoT Blinking LED */}
-            <div className="relative ml-4 mt-0.5 flex h-2.5 w-2.5 items-center justify-center">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-60"></span>
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-red-500 shadow-[0_0_8px_2px_rgba(239,68,68,0.9)]"></span>
-            </div>
           </span>
         </div>
 
         {/* Right Side: Theme button and Menu Button */}
-        <div className="flex items-center justify-end gap-3">
+        <div className="flex items-center justify-end gap-5">
+          {/* Realistic IoT Blinking LED */}
+          <div className="relative flex h-2.5 w-2.5 items-center justify-center -mr-1">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-60"></span>
+            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-red-500 shadow-[0_0_8px_2px_rgba(239,68,68,0.9)]"></span>
+          </div>
+
           <ThemeToggleButton variant="circle" start="center" />
 
           {/* Component 2: Menu Toggle Button */}
