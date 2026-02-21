@@ -5,7 +5,6 @@ import { ScrollingSpecs } from "@/components/ui/skiper-ui/scrolling-specs";
 import { AnimatedPrice } from "@/components/ui/skiper-ui/animated-price";
 import { CrowdCanvas } from "@/components/ui/skiper-ui/crowd-canvas";
 import { FooterBasic } from "@/components/ui/skiper-ui/footer-basic";
-import { ScrollLine } from "@/components/ui/skiper-ui/scroll-line";
 import { BotDisplay } from "@/components/ui/skiper-ui/bot-display";
 import ReactLenis from "lenis/react";
 
@@ -13,13 +12,12 @@ export default function Home() {
   return (
     <ReactLenis root>
       <div className="relative min-h-[300vh] w-full bg-background font-sans text-foreground overflow-hidden">
-        <ScrollLine />
         <Skiper40 />
         <HeroText />
-        <StickyCards />
-        <BotDisplay />
         <ScrollingSpecs />
         <AnimatedPrice />
+        <StickyCards />
+        <BotDisplay />
         <CrowdCanvas />
         <FooterBasic />
       </div>
