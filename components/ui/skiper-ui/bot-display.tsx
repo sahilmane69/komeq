@@ -27,10 +27,10 @@ export const BotDisplay = () => {
 
                     {/* Left text section */}
                     <div className="flex-1 text-center md:text-left z-20">
-                         <h2 className="font-geist text-5xl font-bold tracking-tighter md:text-7xl lg:text-8xl">
+                         <h2 className="font-geist text-4xl sm:text-5xl font-bold tracking-tighter md:text-6xl lg:text-8xl">
                               Core<br /> <span className="text-foreground/40">Hardware</span>
                          </h2>
-                         <p className="mt-8 max-w-lg text-lg text-foreground/50 md:text-xl leading-relaxed">
+                         <p className="mt-6 md:mt-8 max-w-lg text-base sm:text-lg text-foreground/50 md:text-xl leading-relaxed">
                               Dual-axis reaction wheels working in tandem with IMU sensor fusion.
                               The brain behind the physics-defying 0.05ms balance latency.
                          </p>
@@ -61,7 +61,7 @@ export const BotDisplay = () => {
                     </div>
 
                     {/* Right Hand Side Bot Box Container */}
-                    <div className="relative w-full max-w-[500px] flex-1 aspect-square md:aspect-auto md:h-[600px] flex items-center justify-center pointer-events-none md:ml-auto">
+                    <div className="relative w-full max-w-[500px] flex-1 aspect-square md:aspect-auto md:h-[500px] lg:h-[600px] flex items-center justify-center pointer-events-none md:ml-auto">
                          {/* Interactive Bot Image Div! */}
                          <div
                               onPointerMove={handlePointerMove}

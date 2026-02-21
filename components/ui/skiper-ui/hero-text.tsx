@@ -36,10 +36,10 @@ export const HeroText = () => {
                               opacity: opacityValue,
                               filter: blurValue
                          }}
-                         className="font-geist relative w-full max-w-4xl px-4 text-center text-2xl font-semibold leading-snug tracking-tight text-foreground/90 md:text-4xl lg:text-5xl"
+                         className="font-geist relative w-full max-w-4xl px-4 text-center text-xl sm:text-2xl font-semibold leading-relaxed sm:leading-snug tracking-tight text-foreground/90 md:text-4xl lg:text-5xl"
                     >
-                         KOMEQ continuously senses every move, reading angles, motion, and gravity in real-time.
-                         <br />
+                         KOMEQ continuously senses every move, reading angles, motion, and gravity in real- time.
+                         < br />
                          <br />
                          Powered by an Arduino Nano, it transforms data into immediate action. Gyroscopes spin, accelerometers feel, and logic calculates.
                          <br />
@@ -49,6 +49,6 @@ export const HeroText = () => {
                          <div className="pointer-events-none absolute bottom-[-10%] left-0 h-[60vh] w-full bg-linear-to-b from-transparent to-background" />
                     </motion.div>
                </div>
-          </div>
+          </div >
      );
 };

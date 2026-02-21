@@ -11,7 +11,7 @@ import ReactLenis from "lenis/react";
 export default function Home() {
   return (
     <ReactLenis root>
-      <div className="relative min-h-[300vh] w-full bg-background font-sans text-foreground overflow-hidden">
+      <div className="relative min-h-[300vh] w-full bg-background font-sans text-foreground overflow-x-hidden">
         <Skiper40 />
 
         <HeroText />
