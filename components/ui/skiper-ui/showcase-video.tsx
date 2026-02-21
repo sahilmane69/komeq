@@ -142,7 +142,7 @@ export const ShowcaseVideo = () => {
      return (
           <section className="relative flex min-h-[50vh] w-full items-center justify-center bg-transparent py-24 z-10">
                <div className="absolute top-[10%] grid content-start justify-items-center gap-6 text-center z-0">
-                    <span className="relative max-w-[15ch] text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-linear-to-b after:from-foreground after:to-transparent after:content-[''] font-orbitron">
+                    <span className="relative whitespace-nowrap text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-linear-to-b after:from-foreground after:to-transparent after:content-[''] font-orbitron">
                          Click the video to play
                     </span>
                </div>
