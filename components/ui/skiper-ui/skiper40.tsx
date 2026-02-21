@@ -100,7 +100,7 @@ const Skiper58 = ({ onClose }: { onClose: () => void }) => {
               <a href={item.href}>
                 <TextRoll
                   center
-                  className="text-4xl font-extrabold uppercase leading-[0.8] tracking-[-0.03em] transition-colors md:text-6xl"
+                  className="text-4xl font-extrabold uppercase leading-[0.8] tracking-[-0.03em] transition-colors hover:text-red-500 md:text-6xl"
                 >
                   {item.name}
                 </TextRoll>
