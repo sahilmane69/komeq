@@ -2,6 +2,7 @@ import { Skiper40 } from "@/components/ui/skiper-ui/skiper40";
 import { HeroText } from "@/components/ui/skiper-ui/hero-text";
 import { StickyCards } from "@/components/ui/skiper-ui/sticky-cards";
 import { ScrollingSpecs } from "@/components/ui/skiper-ui/scrolling-specs";
+import { ShowcaseVideo } from "@/components/ui/skiper-ui/showcase-video";
 import { AnimatedPrice } from "@/components/ui/skiper-ui/animated-price";
 import { CreditsContext } from "@/components/ui/skiper-ui/credits-section";
 import { FooterBasic } from "@/components/ui/skiper-ui/footer-basic";
@@ -19,6 +20,7 @@ export default function Home() {
         <div id="about">
           <StickyCards />
           <ScrollingSpecs />
+          <ShowcaseVideo />
         </div>
 
         <div id="price">
