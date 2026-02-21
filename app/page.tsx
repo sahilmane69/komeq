@@ -1,5 +1,6 @@
 import { Skiper40 } from "@/components/ui/skiper-ui/skiper40";
 import { HeroText } from "@/components/ui/skiper-ui/hero-text";
+import { Skiper31 } from "@/components/ui/skiper-ui/skiper31";
 import { StickyCards } from "@/components/ui/skiper-ui/sticky-cards";
 import { ScrollingSpecs } from "@/components/ui/skiper-ui/scrolling-specs";
 import { AnimatedPrice } from "@/components/ui/skiper-ui/animated-price";
@@ -13,9 +14,11 @@ export default function Home() {
     <ReactLenis root>
       <div className="relative min-h-[300vh] w-full bg-background font-sans text-foreground overflow-hidden">
         <Skiper40 />
+        <Skiper31 />
         <HeroText />
 
         <div id="about">
+          <StickyCards />
           <ScrollingSpecs />
         </div>
 
@@ -24,7 +27,7 @@ export default function Home() {
         </div>
 
         <div id="specs">
-          <StickyCards />
+
           <BotDisplay />
         </div>
 
