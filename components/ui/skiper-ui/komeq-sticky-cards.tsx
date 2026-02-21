@@ -144,7 +144,6 @@ export const KomeqStickyCards = () => {
                               { id: 5, image: "/komeqimg/image copy 5.png" },
                               { id: 6, image: "/komeqimg/image copy 6.png" },
                               { id: 7, image: "/komeqimg/image.png" },
-                              { id: 8, image: "/komeqimg/image copy 7.png" },
                          ]}
                     />
                </div>
