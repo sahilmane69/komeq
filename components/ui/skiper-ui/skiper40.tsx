@@ -460,8 +460,14 @@ const Skiper40 = () => {
               className="h-10 w-10 object-cover"
             />
           </div>
-          <span className="hidden ml-3 font-orbitron font-semibold text-foreground sm:flex sm:items-center">
-            KOMEQ<span className="text-red-500 font-bold pl-1">[R]</span>
+          <span className="hidden ml-3 font-orbitron font-semibold text-foreground sm:flex sm:items-center tracking-wide">
+            KOMEQ<span className="text-red-500 font-bold pl-0.5 tracking-normal">[R]</span>
+
+            {/* Realistic IoT Blinking LED */}
+            <div className="relative ml-4 mt-0.5 flex h-2.5 w-2.5 items-center justify-center">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500 opacity-60"></span>
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-red-500 shadow-[0_0_8px_2px_rgba(239,68,68,0.9)]"></span>
+            </div>
           </span>
         </div>
 
