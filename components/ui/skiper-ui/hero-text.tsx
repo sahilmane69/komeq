@@ -16,7 +16,7 @@ export const HeroText = () => {
      const transform = useMotionTemplate`rotateX(30deg) translateY(${yMotionValue}px) translateZ(10px)`;
 
      return (
-          <div ref={targetRef} className="relative z-0 h-[120vh] w-full bg-background text-foreground">
+          <div ref={targetRef} className="relative z-0 h-[120vh] w-full bg-transparent text-foreground">
                <div className="absolute left-1/2 top-[10%] z-10 grid -translate-x-1/2 content-start justify-items-center gap-6 text-center text-foreground">
                     <span className="relative max-w-[15ch] text-sm md:text-base uppercase leading-tight opacity-60 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-linear-to-b after:from-foreground after:to-transparent after:content-['']">
                          scroll down to see
