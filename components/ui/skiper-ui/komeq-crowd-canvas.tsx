@@ -301,13 +301,7 @@ export const KomeqCrowdCanvas = () => {
 
                     {/* Right side credits scrolling list */}
                     <div className="flex w-full max-w-sm flex-col items-center gap-8 md:flex-1">
-                         <div className="grid content-start justify-items-center text-center">
-                              <span className="relative text-xs font-medium uppercase tracking-widest opacity-40 after:absolute after:left-1/2 after:top-full after:mt-2 after:h-12 after:w-px after:bg-linear-to-b after:from-foreground after:to-transparent after:content-['']">
-                                   see the fade while scroll
-                              </span>
-                         </div>
-
-                         <div className="mt-12 w-full rounded-2xl border border-white/10 bg-black/20 backdrop-blur-sm p-1 pointer-events-auto">
+                         <div className="w-full rounded-2xl border border-white/10 bg-black/20 backdrop-blur-sm p-1 pointer-events-auto">
                               {/* Using standard div with overflow instead of ScrollArea primitive so we avoid missing dependencies. Prevent lenis from hijacking scrolling here */}
                               <div className="h-[320px] w-full overflow-y-auto overflow-x-hidden rounded-xl no-scrollbar touch-pan-y" data-lenis-prevent="true">
                                    <div className="space-y-1 p-1">

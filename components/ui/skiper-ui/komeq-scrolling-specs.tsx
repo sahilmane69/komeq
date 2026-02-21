@@ -48,9 +48,9 @@ export const KomeqScrollingSpecs = () => {
                <ProgressiveBlur position="top" height="200px" blurAmount="12px" />
 
                <div className="relative w-full flex flex-col items-center">
-                    <div className="w-full max-w-5xl space-y-12 px-6 py-[15vh] text-justify font-geist text-2xl font-medium leading-[1.8] tracking-tight md:text-3xl lg:text-4xl lg:leading-[1.6] md:px-12 text-foreground">
+                    <div className="w-full max-w-4xl space-y-8 px-6 py-[15vh] text-justify font-geist text-lg font-medium leading-[1.8] tracking-tight md:text-xl lg:text-2xl lg:leading-[1.8] md:px-12 text-foreground/90">
                          <p>
-                              The KOMEQ large-scale self-balancing product is designed and
+                              The <img src="/image.png" alt="KOMEQ Logo" className="inline h-5 lg:h-6 w-auto mb-1 mx-1 brightness-0 invert" /> KOMEQ large-scale self-balancing product is designed and
                               developed using an Arduino microcontroller as the brain of the
                               entire system. The Arduino continuously collects real-time data from
                               an Inertial Measurement Unit (IMU) that combines a gyroscope and
