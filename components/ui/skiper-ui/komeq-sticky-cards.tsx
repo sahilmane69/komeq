@@ -131,11 +131,11 @@ const StickyCard002 = ({
 
 export const KomeqStickyCards = () => {
      return (
-          <div className="relative z-10 w-full -mt-[80vh]">
+          <div className="relative z-10 w-full -mt-[20vh]">
                {/* Cinematic fade that overlaps the fading text */}
-               <div className="pointer-events-none h-[80vh] w-full bg-gradient-to-b from-transparent to-background" />
+               <div className="pointer-events-none h-[40vh] w-full bg-linear-to-b from-transparent to-background" />
 
-               <div className="bg-background pb-20 pt-10">
+               <div className="bg-background pb-10 pt-0">
                     <StickyCard002
                          cards={[
                               { id: 1, image: "/komeqimg/image copy.png" },

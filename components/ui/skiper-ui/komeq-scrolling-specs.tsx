@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
+import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 
 type ProgressiveBlurProps = {
      className?: string;
-     backgroundColor?: string;
      position?: "top" | "bottom";
      height?: string;
      blurAmount?: string;
@@ -10,29 +13,30 @@ type ProgressiveBlurProps = {
 
 const ProgressiveBlur = ({
      className = "",
-     backgroundColor = "hsl(var(--background))",
      position = "top",
-     height = "300px",
+     height = "150px",
      blurAmount = "8px",
 }: ProgressiveBlurProps) => {
      const isTop = position === "top";
 
+     // We compute the background based on the position and tailwind classes
      return (
           <div
-               className={`pointer-events-none absolute left-0 z-20 w-full select-none ${className}`}
+               className={cn(
+                    "pointer-events-none sticky z-20 w-full select-none",
+                    isTop ? "top-0 bg-gradient-to-b from-background to-transparent" : "bottom-0 bg-gradient-to-t from-background to-transparent",
+                    className
+               )}
                style={{
-                    [isTop ? "top" : "bottom"]: 0,
                     height,
-                    background: isTop
-                         ? `linear-gradient(to top, transparent, ${backgroundColor})`
-                         : `linear-gradient(to bottom, transparent, ${backgroundColor})`,
-                    maskImage: isTop
-                         ? `linear-gradient(to bottom, ${backgroundColor} 50%, transparent)`
-                         : `linear-gradient(to top, ${backgroundColor} 50%, transparent)`,
-                    WebkitBackdropFilter: `blur(${blurAmount})`,
                     backdropFilter: `blur(${blurAmount})`,
-                    WebkitUserSelect: "none",
-                    userSelect: "none",
+                    WebkitBackdropFilter: `blur(${blurAmount})`,
+                    maskImage: isTop
+                         ? `linear-gradient(to bottom, black 20%, transparent)`
+                         : `linear-gradient(to top, black 20%, transparent)`,
+                    WebkitMaskImage: isTop
+                         ? `linear-gradient(to bottom, black 20%, transparent)`
+                         : `linear-gradient(to top, black 20%, transparent)`,
                }}
           />
      );
@@ -40,12 +44,11 @@ const ProgressiveBlur = ({
 
 export const KomeqScrollingSpecs = () => {
      return (
-          <div className="relative flex h-[100vh] w-full flex-col items-center justify-center bg-background text-foreground/80 mt-10 -mb-[20vh] z-20">
-               <ProgressiveBlur position="top" backgroundColor="hsl(var(--background))" />
-               <ProgressiveBlur position="bottom" backgroundColor="hsl(var(--background))" />
+          <div className="relative w-full bg-background mt-4 z-20">
+               <ProgressiveBlur position="top" height="200px" blurAmount="12px" />
 
-               <div className="flex h-full w-full flex-col items-center overflow-y-scroll scrollbar-hide">
-                    <div className="w-full max-w-3xl space-y-12 px-6 py-64 text-justify font-geist text-lg leading-relaxed md:text-xl md:px-12 text-[#ff5800]">
+               <div className="relative w-full flex flex-col items-center">
+                    <div className="w-full max-w-5xl space-y-12 px-6 py-[50vh] text-justify font-geist text-2xl font-medium leading-[1.8] tracking-tight md:text-3xl lg:text-4xl lg:leading-[1.6] md:px-12 text-foreground">
                          <p>
                               The KOMEQ large-scale self-balancing product is designed and
                               developed using an Arduino microcontroller as the brain of the
@@ -96,6 +99,8 @@ export const KomeqScrollingSpecs = () => {
                          </p>
                     </div>
                </div>
+
+               <ProgressiveBlur position="bottom" height="200px" blurAmount="12px" />
           </div>
      );
 };

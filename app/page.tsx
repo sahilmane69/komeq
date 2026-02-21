@@ -2,7 +2,8 @@ import { Skiper40 } from "@/components/ui/skiper-ui/skiper40";
 import { KomeqHeroText } from "@/components/ui/skiper-ui/komeq-hero-text";
 import { KomeqStickyCards } from "@/components/ui/skiper-ui/komeq-sticky-cards";
 import { KomeqScrollingSpecs } from "@/components/ui/skiper-ui/komeq-scrolling-specs";
-import { KomeqFooter } from "@/components/ui/skiper-ui/komeq-footer";
+import { KomeqAnimatedPrice } from "@/components/ui/skiper-ui/komeq-animated-price";
+import { KomeqFooterBasic } from "@/components/ui/skiper-ui/komeq-footer-basic";
 import ReactLenis from "lenis/react";
 
 export default function Home() {
@@ -13,7 +14,8 @@ export default function Home() {
         <KomeqHeroText />
         <KomeqStickyCards />
         <KomeqScrollingSpecs />
-        <KomeqFooter />
+        <KomeqAnimatedPrice />
+        <KomeqFooterBasic />
       </div>
     </ReactLenis>
   );

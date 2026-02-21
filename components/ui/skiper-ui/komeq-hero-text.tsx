@@ -10,15 +10,15 @@ export const KomeqHeroText = () => {
           offset: ["start start", "end start"]
      });
 
-     const yMotionValue = useTransform(scrollYProgress, [0, 0.7], [487, 0]);
-     const opacityValue = useTransform(scrollYProgress, [0.65, 0.9], [1, 0]);
-     const blurValue = useTransform(scrollYProgress, [0.65, 0.9], ["blur(0px)", "blur(12px)"]);
+     const yMotionValue = useTransform(scrollYProgress, [0, 1], [0, -100]);
+     const opacityValue = useTransform(scrollYProgress, [0, 0.7, 1], [1, 1, 0]);
+     const blurValue = useTransform(scrollYProgress, [0, 0.7, 1], ["blur(0px)", "blur(0px)", "blur(12px)"]);
      const transform = useMotionTemplate`rotateX(30deg) translateY(${yMotionValue}px) translateZ(10px)`;
 
      return (
-          <div ref={targetRef} className="relative z-0 h-[300vh] w-full">
-               <div className="absolute left-1/2 top-[10%] grid -translate-x-1/2 content-start justify-items-center gap-6 text-center text-foreground">
-                    <span className="relative max-w-[12ch] text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-gradient-to-b after:from-foreground after:to-background after:content-['']">
+          <div ref={targetRef} className="relative z-0 h-[120vh] w-full">
+               <div className="absolute left-1/2 top-[80vh] grid -translate-x-1/2 content-start justify-items-center gap-6 text-center text-foreground">
+                    <span className="relative max-w-[12ch] text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-linear-to-b after:from-foreground after:to-transparent after:content-['']">
                          scroll down to see
                     </span>
                </div>
@@ -36,36 +36,20 @@ export const KomeqHeroText = () => {
                               opacity: opacityValue,
                               filter: blurValue
                          }}
-                         className="font-geist w-full max-w-4xl px-4 text-center text-[0.8rem] font-bold leading-tight tracking-tighter text-[#ff5800] md:text-3xl"
+                         className="font-geist w-full max-w-2xl px-4 text-center text-base font-medium leading-[1.8] tracking-wide text-foreground/90 md:text-lg lg:text-xl"
                     >
-                         KOMEQ stands right there, sensing every move, every tilt, every
-                         small mistake, reading angles, reading motion, reading gravity
-                         like it’s speaking to it, the sensors keep talking, the data keeps
-                         flowing, and the controller keeps listening…
+                         KOMEQ continuously senses every move, reading
+                         angles, motion, and gravity in real-time.
                          <br />
                          <br />
-                         It leans a little, it drifts a little, but before it can fall, it
-                         knows, before imbalance becomes failure, it reacts, before
-                         silence, there is correction.
+                         Powered by an Arduino Nano, it transforms data
+                         into immediate action. Gyroscopes spin, accelerometers
+                         feel, and logic calculates.
                          <br />
                          <br />
-                         The Arduino Nano sits at the center, quiet but alert, taking
-                         numbers, turning them into decisions, decisions into action,
-                         action into balance.
-                         <br />
-                         <br />
-                         Gyroscope spins, accelerometer feels, logic calculates, motors
-                         respond, again and again and again, no pause, no break, no second
-                         thought.
-                         <br />
-                         <br />
-                         It doesn’t wait to fall. It doesn’t ask for support. It keeps
-                         itself upright, right there, right now, every moment.
-                         <br />
-                         <br />
-                         This is not randomness. This is not chance. This is feedback
-                         talking to control, control talking to motion, motion answering
-                         back in real time.
+                         Before imbalance becomes failure, it reacts.
+                         This is feedback talking to control, answering
+                         back at the speed of thought.
                     </motion.div>
                </div>
           </div>
