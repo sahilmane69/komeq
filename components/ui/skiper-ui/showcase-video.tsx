@@ -140,9 +140,9 @@ export const ShowcaseVideo = () => {
      };
 
      return (
-          <section className="relative flex min-h-[50vh] w-full items-center justify-center bg-transparent py-24 z-10">
-               <div className="absolute top-[10%] grid content-start justify-items-center gap-6 text-center z-0">
-                    <span className="relative whitespace-nowrap text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-linear-to-b after:from-foreground after:to-transparent after:content-[''] font-orbitron">
+          <section className="relative flex flex-col min-h-[50vh] w-full items-center justify-center bg-transparent py-24 px-4 gap-24 z-10 overflow-hidden">
+               <div className="relative grid content-start justify-items-center text-center z-0 pt-12">
+                    <span className="relative whitespace-nowrap text-xs md:text-sm uppercase tracking-widest leading-none opacity-40 after:absolute after:left-1/2 after:top-[calc(100%+24px)] after:h-16 after:w-px after:bg-linear-to-b after:from-foreground after:to-transparent after:content-[''] font-orbitron">
                          Click the video to play
                     </span>
                </div>
