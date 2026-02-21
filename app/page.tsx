@@ -1,8 +1,20 @@
 import { Skiper40 } from "@/components/ui/skiper-ui/skiper40";
-
+import { KomeqHeroText } from "@/components/ui/skiper-ui/komeq-hero-text";
+import { KomeqStickyCards } from "@/components/ui/skiper-ui/komeq-sticky-cards";
+import { KomeqScrollingSpecs } from "@/components/ui/skiper-ui/komeq-scrolling-specs";
+import { KomeqFooter } from "@/components/ui/skiper-ui/komeq-footer";
+import ReactLenis from "lenis/react";
 
 export default function Home() {
   return (
-    <Skiper40 />
+    <ReactLenis root>
+      <div className="relative min-h-[300vh] w-full bg-background font-sans text-foreground overflow-hidden">
+        <Skiper40 />
+        <KomeqHeroText />
+        <KomeqStickyCards />
+        <KomeqScrollingSpecs />
+        <KomeqFooter />
+      </div>
+    </ReactLenis>
   );
 }
