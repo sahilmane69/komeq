@@ -460,8 +460,8 @@ const Skiper40 = () => {
               className="h-10 w-10 object-cover"
             />
           </div>
-          <span className="hidden ml-3 font-semibold text-foreground sm:block">
-            KOMEQ
+          <span className="hidden ml-3 font-semibold text-foreground sm:flex sm:items-center">
+            <span className="text-red-500 font-bold pr-1">[R]</span>KOMEQ
           </span>
         </div>
 
