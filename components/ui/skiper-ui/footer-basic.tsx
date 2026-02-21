@@ -90,7 +90,7 @@ export const FooterBasic = () => {
                {/* Middle Section */}
                <div className="flex w-full items-center justify-between mt-auto mb-20 md:mb-32 relative z-10 px-0">
                     <div className="text-sm md:text-base tracking-wide text-foreground/70 max-w-2xl leading-relaxed mt-4 md:mt-0 px-0 md:px-4">
-                         &quot;See U at IPU&quot; is a collaborative project where the website design and front-end structure were created by{" "}
+                         <AnimatedLink href="#" className="inline-flex! px-1 py-0! font-orbitron text-purple-400 text-lg md:text-xl lg:text-2xl underline decoration-purple-400 underline-offset-4 tracking-widest before:hover:h-full!">Institute of Physics, Bhubaneswar</AnimatedLink> <br className="hidden md:block" /> is a collaborative project where the website design and front-end structure were created by{" "}
                          <AnimatedLink href="https://sahilmane-one.vercel.app" className="inline-flex! px-1 py-0! font-orbitron text-foreground text-xs md:text-sm uppercase tracking-widest before:hover:h-full!">Sahil Mane</AnimatedLink>,
                          focusing on a clean, user-friendly interface and smooth user experience. The intelligent model and backend logic were developed by{" "}
                          <AnimatedLink href="https://instagram.com/midnighttoast097" className="inline-flex! px-1 py-0! font-orbitron text-foreground text-xs md:text-sm uppercase tracking-widest before:hover:h-full!">Himanshu Kumar Singh</AnimatedLink>,
