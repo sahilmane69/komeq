@@ -89,9 +89,27 @@ export const FooterBasic = () => {
 
                {/* Middle Section */}
                <div className="flex w-full items-center justify-between mt-auto mb-20 md:mb-32 relative z-10 px-0">
-                    <div className="text-sm md:text-base tracking-wide text-foreground/70 max-w-2xl leading-relaxed mt-4 md:mt-0 px-0 md:px-4">
-                         <AnimatedLink href="#" className="inline-flex! px-1 py-0! font-orbitron text-purple-400 text-lg md:text-xl lg:text-2xl underline decoration-purple-400 underline-offset-4 tracking-widest before:hover:h-full!">Institute of Physics, Bhubaneswar</AnimatedLink> <br className="hidden md:block" /> is a collaborative project where the website design and front-end structure were created by{" "}
-                         <AnimatedLink href="https://sahilmane-one.vercel.app" className="inline-flex! px-1 py-0! font-orbitron text-foreground text-xs md:text-sm uppercase tracking-widest before:hover:h-full!">Sahil Mane</AnimatedLink>,
+                    <div className="text-sm md:text-base tracking-wide text-foreground/70 max-w-2xl lg:max-w-4xl leading-relaxed mt-4 md:mt-0 px-0 md:px-4">
+                         <div className="mb-4 md:mb-6">
+                              <AnimatedLink href="#" className="inline-flex! px-1 py-0! font-orbitron text-foreground text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-[0.1em] drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] before:hover:h-full!">SEE U AT IPUB</AnimatedLink>
+                         </div>
+                         is a collaborative project where the website design and front-end structure were created by{" "}
+                         <span className="relative group/sahil inline-block cursor-help">
+                              <AnimatedLink href="https://sahilmane-one.vercel.app" className="inline-flex! px-1 py-0! font-orbitron text-foreground text-xs md:text-sm uppercase tracking-widest before:hover:h-full!">Sahil Mane</AnimatedLink>
+
+                              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 pointer-events-none opacity-0 group-hover/sahil:opacity-100 transition-all duration-300 translate-y-2 group-hover/sahil:translate-y-0 z-50 w-max max-w-[280px] sm:max-w-[350px]">
+                                   <div className="relative bg-black/90 backdrop-blur-xl border border-white/10 p-4 rounded-xl shadow-[0_0_30px_rgba(239,68,68,0.2)]">
+                                        <div className="font-orbitron text-[10px] sm:text-xs text-foreground/80 leading-relaxed text-center tracking-wider">
+                                             <span className="text-white font-bold block mb-1 uppercase">Full Stack Developer</span>
+                                             <span>from Pune • ADYPU B.Tech CS</span>
+                                             <span className="block mt-2 text-red-500 font-bold uppercase text-[9px] sm:text-[10px] tracking-widest">
+                                                  [ Something Cool & Badass ]
+                                             </span>
+                                        </div>
+                                        <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-black/90 border-b border-r border-white/10 rotate-45" />
+                                   </div>
+                              </div>
+                         </span>,
                          focusing on a clean, user-friendly interface and smooth user experience. The intelligent model and backend logic were developed by{" "}
                          <AnimatedLink href="https://instagram.com/midnighttoast097" className="inline-flex! px-1 py-0! font-orbitron text-foreground text-xs md:text-sm uppercase tracking-widest before:hover:h-full!">Himanshu Kumar Singh</AnimatedLink>,
                          enabling accurate processing and functionality. Together, the project combines thoughtful design with a robust model to deliver a practical and effective solution.
