@@ -89,8 +89,8 @@ export const FooterBasic = () => {
                </div>
 
                {/* Middle Section */}
-               <div className="flex w-full items-center justify-between mt-auto mb-20 md:mb-32 relative z-10 px-0">
-                    <div className="text-sm md:text-base tracking-wider text-foreground/50 max-w-2xl lg:max-w-4xl leading-relaxed mt-4 md:mt-0 px-0 md:px-4 text-justify">
+               <div className="flex flex-col md:flex-row w-full items-end justify-between mt-auto mb-20 md:mb-32 relative z-10 px-0 gap-8 md:gap-4">
+                    <div className="w-full text-sm md:text-base tracking-wider text-foreground/50 max-w-2xl lg:max-w-4xl leading-relaxed mt-4 md:mt-0 px-0 md:px-4 text-justify">
                          <div className="mb-4 md:mb-6">
                               <span className="inline-flex px-1 py-0 text-foreground text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-widest opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">SEE YOU AT IPU, BHUBANESWAR</span>
                          </div>
@@ -124,7 +124,7 @@ export const FooterBasic = () => {
                     </div>
 
                     {/* The 3 Dots Panel */}
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 self-end md:self-auto shrink-0 pb-2 md:pb-0 pr-4 md:pr-0">
                          <div className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 rounded-full bg-red-500 shadow-[0_0_10px_2px_rgba(239,68,68,0.4)]" />
                          <div className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 rounded-full bg-black shadow-[0_0_10px_2px_rgba(0,0,0,0.5)] border border-white/20" />
                          <div className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 rounded-full bg-white shadow-[0_0_10px_2px_rgba(255,255,255,0.4)]" />
