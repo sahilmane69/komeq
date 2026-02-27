@@ -14,7 +14,7 @@ import {
      MediaVolumeRange,
 } from "media-chrome/react";
 import type { ComponentProps } from "react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -124,6 +124,20 @@ export const VideoPlayerContent = ({
 export const ShowcaseVideo = () => {
      const [showVideoPopOver, setShowVideoPopOver] = useState(false);
 
+     useEffect(() => {
+          if (showVideoPopOver) {
+               document.body.style.overflow = "hidden";
+               document.documentElement.style.overflow = "hidden";
+          } else {
+               document.body.style.overflow = "";
+               document.documentElement.style.overflow = "";
+          }
+          return () => {
+               document.body.style.overflow = "";
+               document.documentElement.style.overflow = "";
+          };
+     }, [showVideoPopOver]);
+
      const SPRING = {
           mass: 0.1,
      };
@@ -140,42 +154,50 @@ export const ShowcaseVideo = () => {
      };
 
      return (
-          <section className="relative flex flex-col min-h-[50vh] w-full items-center justify-center bg-transparent py-24 px-4 gap-24 z-10 overflow-hidden">
-               <div className="relative grid content-start justify-items-center text-center z-0 pt-12">
-                    <span className="relative whitespace-nowrap text-xs md:text-sm uppercase tracking-widest leading-none opacity-40 after:absolute after:left-1/2 after:top-[calc(100%+24px)] after:h-16 after:w-px after:bg-linear-to-b after:from-foreground after:to-transparent after:content-[''] font-orbitron">
-                         Click the video to play
-                    </span>
-               </div>
+          <>
+               {/* 
+                  Render the modal outside the z-10 section's stacking context 
+                  so it overlaps all previous z-20 elements on the page perfectly. 
+               */}
                <AnimatePresence>
                     {showVideoPopOver && (
                          <VideoPopOver setShowVideoPopOver={setShowVideoPopOver} />
                     )}
                </AnimatePresence>
-               <div
-                    onMouseMove={handlePointerMove}
-                    onMouseLeave={() => {
-                         opacity.set(0);
-                    }}
-                    onClick={() => setShowVideoPopOver(true)}
-                    className="w-full max-w-3xl rounded-2xl overflow-hidden cursor-none relative z-20 shadow-2xl border border-white/10"
-               >
-                    <motion.div
-                         style={{ x, y, opacity }}
-                         className="absolute z-30 flex w-fit select-none items-center justify-center gap-2 p-3 font-orbitron font-bold text-sm text-white mix-blend-exclusion pointer-events-none"
+
+               <section className="relative flex flex-col min-h-[50vh] w-full items-center justify-center bg-transparent py-24 px-4 gap-24 z-10 overflow-hidden">
+                    <div className="relative grid content-start justify-items-center text-center z-0 pt-12">
+                         <span className="relative whitespace-nowrap text-xs md:text-sm uppercase tracking-widest leading-none opacity-40 after:absolute after:left-1/2 after:top-[calc(100%+24px)] after:h-16 after:w-px after:bg-linear-to-b after:from-foreground after:to-transparent after:content-[''] font-orbitron">
+                              Click the video to play
+                         </span>
+                    </div>
+
+                    <div
+                         onMouseMove={handlePointerMove}
+                         onMouseLeave={() => {
+                              opacity.set(0);
+                         }}
+                         onClick={() => setShowVideoPopOver(true)}
+                         className="w-full max-w-3xl rounded-2xl overflow-hidden cursor-none relative z-20 shadow-2xl border border-white/10"
                     >
-                         <Play className="size-5 fill-white" />
-                    </motion.div>
-                    <video
-                         autoPlay
-                         muted
-                         playsInline
-                         loop
-                         className="h-auto w-full object-cover rounded-2xl opacity-80 hover:opacity-100 transition-opacity duration-500"
-                    >
-                         <source src="/komeqvideo.mp4" />
-                    </video>
-               </div>
-          </section>
+                         <motion.div
+                              style={{ x, y, opacity }}
+                              className="absolute z-30 flex w-fit select-none items-center justify-center gap-2 p-3 font-orbitron font-bold text-sm text-white mix-blend-exclusion pointer-events-none"
+                         >
+                              <Play className="size-5 fill-white" />
+                         </motion.div>
+                         <video
+                              autoPlay
+                              muted
+                              playsInline
+                              loop
+                              className="h-auto w-full object-cover rounded-2xl opacity-80 hover:opacity-100 transition-opacity duration-500"
+                         >
+                              <source src="/komeqvideo.mp4" />
+                         </video>
+                    </div>
+               </section>
+          </>
      );
 };
 
@@ -185,7 +207,7 @@ const VideoPopOver = ({
      setShowVideoPopOver: (showVideoPopOver: boolean) => void;
 }) => {
      return (
-          <div className="fixed left-0 top-0 z-101 flex h-screen w-screen items-center justify-center">
+          <div className="fixed left-0 top-0 z-99999 flex h-dvh w-screen items-center justify-center touch-none">
                <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

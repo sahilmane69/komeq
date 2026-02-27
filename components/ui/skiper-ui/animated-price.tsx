@@ -6,40 +6,82 @@ import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
 export function AnimatedPrice() {
-     const [displayValue, setDisplayValue] = useState(0);
-     const count = useMotionValue(0);
+     const [displayValueInvested, setDisplayValueInvested] = useState(0);
+     const [displayValueReal, setDisplayValueReal] = useState(0);
+     const countInvested = useMotionValue(0);
+     const countReal = useMotionValue(0);
      const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.5 });
 
      useEffect(() => {
           if (inView) {
-               const controls = animate(count, 5.8, {
+               const controlsInvested = animate(countInvested, 5.8, {
                     duration: 2,
                     ease: "easeOut",
-                    onUpdate: (latest) => setDisplayValue(Number(latest.toFixed(1))),
+                    onUpdate: (latest) => setDisplayValueInvested(Number(latest.toFixed(1))),
                });
-               return () => controls.stop();
+               const controlsReal = animate(countReal, 3.5, {
+                    duration: 2,
+                    ease: "easeOut",
+                    onUpdate: (latest) => setDisplayValueReal(Number(latest.toFixed(1))),
+               });
+               return () => {
+                    controlsInvested.stop();
+                    controlsReal.stop();
+               };
           } else {
                requestAnimationFrame(() => {
-                    setDisplayValue(0);
-                    count.set(0);
+                    setDisplayValueInvested(0);
+                    countInvested.set(0);
+                    setDisplayValueReal(0);
+                    countReal.set(0);
                });
           }
-     }, [inView, count]);
+     }, [inView, countInvested, countReal]);
 
      return (
           <div className="relative flex h-[80vh] w-full flex-col items-center justify-center bg-transparent text-foreground z-20">
                <div className="absolute top-[20%] left-1/2 grid -translate-x-1/2 content-start justify-items-center gap-6 text-center text-foreground">
-                    <span className="relative max-w-[15ch] text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-linear-to-b after:from-foreground after:to-transparent after:content-['']">
-                         unbeatable value
+                    <span className="relative max-w-[20ch] text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-linear-to-b after:from-foreground after:to-transparent after:content-['']">
+                         Investment vs Return
                     </span>
                </div>
-               <div ref={ref} className="font-geist text-[20vw] font-bold tracking-tighter md:text-[15vw] flex items-center text-foreground">
-                    <NumberFlow
-                         value={displayValue}
-                         format={{ minimumFractionDigits: 1, maximumFractionDigits: 1 }}
-                         prefix="₹"
-                         suffix="K"
-                    />
+               <div ref={ref} className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-32 w-full pt-10">
+
+                    {/* Real Value */}
+                    <div className="flex flex-col items-center">
+                         <div className="font-geist text-[15vw] font-bold tracking-tighter md:text-[8vw] flex items-center text-white">
+                              <NumberFlow
+                                   value={displayValueReal}
+                                   format={{ minimumFractionDigits: 1, maximumFractionDigits: 1 }}
+                                   prefix="₹"
+                                   suffix="K"
+                              />
+                         </div>
+                         <span className="text-sm md:text-base font-medium tracking-widest uppercase text-white/50 mt-2">
+                              Real Value
+                         </span>
+                    </div>
+
+                    {/* Divider */}
+                    <div className="hidden md:block w-px h-24 bg-white/10 relative">
+                         <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-[2px] bg-linear-to-b from-transparent via-[#ff3333]/50 to-transparent blur-[2px]" />
+                    </div>
+
+                    {/* Value Invested */}
+                    <div className="flex flex-col items-center">
+                         <div className="font-geist text-[15vw] font-bold tracking-tighter md:text-[8vw] flex items-center text-[#ff3333]">
+                              <NumberFlow
+                                   value={displayValueInvested}
+                                   format={{ minimumFractionDigits: 1, maximumFractionDigits: 1 }}
+                                   prefix="₹"
+                                   suffix="K"
+                              />
+                         </div>
+                         <span className="text-sm md:text-base font-medium tracking-widest uppercase text-[#ff3333]/70 mt-2">
+                              Value Invested
+                         </span>
+                    </div>
+
                </div>
           </div>
      );

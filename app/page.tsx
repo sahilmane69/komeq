@@ -7,6 +7,8 @@ import { AnimatedPrice } from "@/components/ui/skiper-ui/animated-price";
 import { CreditsContext, CrowdCanvas } from "@/components/ui/skiper-ui/credits-section";
 import { FooterBasic } from "@/components/ui/skiper-ui/footer-basic";
 import { BotDisplay } from "@/components/ui/skiper-ui/bot-display";
+import { ReviewsAndCounter } from "@/components/ui/skiper-ui/reviews-and-counter";
+import { VisitorCounter } from "@/components/ui/skiper-ui/visitor-counter";
 import ReactLenis from "lenis/react";
 
 export default function Home() {
@@ -36,7 +38,9 @@ export default function Home() {
           <CreditsContext />
         </div>
 
+        <ReviewsAndCounter />
         <FooterBasic />
+        <VisitorCounter />
 
       </div>
     </ReactLenis>
