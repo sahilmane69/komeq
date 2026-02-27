@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Check } from "lucide-react";
+import { Star, Check, Send } from "lucide-react";
 import { useEffect, useState } from "react";
 
 type Review = {
@@ -71,7 +71,7 @@ export function ReviewsAndCounter() {
      };
 
      return (
-          <div className="relative w-full py-24 px-6 md:px-12 z-20 overflow-hidden text-left bg-black border-t border-white/5">
+          <div className="relative w-full py-24 px-6 md:px-12 z-20 overflow-hidden text-left bg-background border-t border-border">
                {/* Background ambient glow matching the theme */}
                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-red-500/10 blur-[120px] rounded-full pointer-events-none" />
 
@@ -79,16 +79,16 @@ export function ReviewsAndCounter() {
 
                     {/* Header */}
                     <div className="text-center space-y-4 mb-4">
-                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-2 leading-tight">
+                         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-2 leading-tight">
                               Voices of the <span className="text-transparent bg-clip-text bg-linear-to-br from-red-400 to-red-600">Pioneers</span>
                          </h2>
                     </div>
 
                     <div className="space-y-6">
-                         <div className="bg-[#121212] rounded-[32px] p-8 sm:p-10 flex flex-col space-y-8 w-full shadow-2xl relative z-10 mx-auto max-w-2xl">
+                         <div className="bg-white dark:bg-[#121212] border border-gray-200 dark:border-transparent rounded-[32px] p-8 sm:p-10 flex flex-col space-y-8 w-full shadow-xl dark:shadow-2xl relative z-10 mx-auto max-w-2xl transition-colors">
                               <div className="space-y-2 mb-2">
-                                   <h3 className="text-[28px] font-semibold text-white tracking-tight">Customer Review Form</h3>
-                                   <p className="text-[#e0e0e0] text-base leading-relaxed mt-2 pt-2">
+                                   <h3 className="text-[28px] font-semibold text-gray-900 dark:text-white tracking-tight">Customer Review Form</h3>
+                                   <p className="text-gray-700 dark:text-[#e0e0e0] text-base leading-relaxed mt-2 pt-2">
                                         We value your feedback. Please take a<br />
                                         moment to review your experience with us.
                                    </p>
@@ -103,7 +103,7 @@ export function ReviewsAndCounter() {
                                                   required
                                                   value={newName}
                                                   onChange={(e) => setNewName(e.target.value)}
-                                                  className="w-full bg-transparent border-b border-[#333] px-1 pb-3 pt-6 text-[#e0e0e0] placeholder-[#888] focus:outline-hidden focus:border-[#777] transition-colors peer text-lg"
+                                                  className="w-full bg-transparent border-b border-gray-300 dark:border-[#333] px-1 pb-3 pt-6 text-gray-900 dark:text-[#e0e0e0] placeholder-gray-400 dark:placeholder-[#888] focus:outline-hidden focus:border-gray-500 dark:focus:border-[#777] transition-colors peer text-lg"
                                                   placeholder="Your Name"
                                              />
                                         </div>
@@ -112,7 +112,7 @@ export function ReviewsAndCounter() {
                                                   type="email"
                                                   value={newEmail}
                                                   onChange={(e) => setNewEmail(e.target.value)}
-                                                  className="w-full bg-transparent border-b border-[#333] px-1 pb-3 pt-6 text-[#e0e0e0] placeholder-[#888] focus:outline-hidden focus:border-[#777] transition-colors peer text-lg"
+                                                  className="w-full bg-transparent border-b border-gray-300 dark:border-[#333] px-1 pb-3 pt-6 text-gray-900 dark:text-[#e0e0e0] placeholder-gray-400 dark:placeholder-[#888] focus:outline-hidden focus:border-gray-500 dark:focus:border-[#777] transition-colors peer text-lg"
                                                   placeholder="Your Email"
                                              />
                                         </div>
@@ -121,8 +121,8 @@ export function ReviewsAndCounter() {
                                    {/* Overall Experience / 1-10 Scale */}
                                    <div className="space-y-4 pt-4 mb-2">
                                         <div className="space-y-1">
-                                             <h4 className="text-[#e0e0e0] text-[17px]">Overall Experience</h4>
-                                             <p className="text-[#888] text-sm mt-1">Rate your overall experience with us</p>
+                                             <h4 className="text-gray-900 dark:text-[#e0e0e0] text-[17px] font-medium">Overall Experience</h4>
+                                             <p className="text-gray-600 dark:text-[#888] text-sm mt-1">Rate your overall experience with us</p>
                                         </div>
 
                                         <div className="space-y-3 pt-2">
@@ -133,14 +133,14 @@ export function ReviewsAndCounter() {
                                                             onClick={() => setRating(num)}
                                                             className="flex-1 flex flex-col items-center cursor-pointer group"
                                                        >
-                                                            <div className={`text-[17px] mb-4 transition-colors ${(rating ?? 0) >= num ? 'text-white' : 'text-[#e0e0e0] group-hover:text-white'}`}>
+                                                            <div className={`text-[17px] font-medium mb-4 transition-colors ${(rating ?? 0) >= num ? 'text-black dark:text-white' : 'text-gray-400 dark:text-[#e0e0e0] group-hover:text-gray-800 dark:group-hover:text-white'}`}>
                                                                  {num}
                                                             </div>
-                                                            <div className={`w-full h-[2px] transition-colors ${(rating ?? 0) >= num ? 'bg-[#999]' : 'bg-[#333] group-hover:bg-[#555]'}`} />
+                                                            <div className={`w-full h-[2px] transition-colors ${(rating ?? 0) >= num ? 'bg-gray-800 dark:bg-[#999]' : 'bg-gray-200 dark:bg-[#333] group-hover:bg-gray-400 dark:group-hover:bg-[#555]'}`} />
                                                        </div>
                                                   ))}
                                              </div>
-                                             <div className="flex justify-between w-full text-[13px] text-[#888] pt-1">
+                                             <div className="flex justify-between w-full text-[13px] font-medium text-gray-500 dark:text-[#888] pt-1">
                                                   <span>Poor</span>
                                                   <span>Excellent</span>
                                              </div>
@@ -154,10 +154,10 @@ export function ReviewsAndCounter() {
                                              required
                                              value={newContent}
                                              onChange={(e) => setNewContent(e.target.value)}
-                                             className="w-full bg-transparent border-b border-[#333] px-1 pb-3 pt-6 text-[#e0e0e0] placeholder-[#888] focus:outline-hidden focus:border-[#777] transition-colors text-lg"
+                                             className="w-full bg-transparent border-b border-gray-300 dark:border-[#333] px-1 pb-3 pt-6 text-gray-900 dark:text-[#e0e0e0] placeholder-gray-500 dark:placeholder-[#888] focus:outline-hidden focus:border-gray-800 dark:focus:border-[#777] transition-colors text-lg font-medium"
                                              placeholder="Comments"
                                         />
-                                        <p className="text-[#888] text-[13px] mt-3">Please provide any additional comments or suggestions</p>
+                                        <p className="text-gray-600 dark:text-[#888] text-[13px] mt-3">Please provide any additional comments or suggestions</p>
                                    </div>
 
                                    {/* Checkbox */}
@@ -169,11 +169,11 @@ export function ReviewsAndCounter() {
                                                   checked={agreed}
                                                   onChange={(e) => setAgreed(e.target.checked)}
                                              />
-                                             <div className={`w-5 h-5 rounded-[4px] border ${agreed ? 'bg-[#333] border-[#444]' : 'border-[#444] group-hover:border-[#666] flex'} items-center justify-center transition-colors bg-[#222]`}>
+                                             <div className={`w-5 h-5 rounded-[4px] border ${agreed ? 'bg-gray-800 dark:bg-[#333] border-gray-800 dark:border-[#444]' : 'border-gray-300 dark:border-[#444] group-hover:border-gray-400 dark:group-hover:border-[#666] flex bg-gray-50 dark:bg-[#222]'} items-center justify-center transition-colors`}>
                                                   {agreed && <Check className="w-3.5 h-3.5 text-white stroke-4" />}
                                              </div>
                                         </div>
-                                        <span className="text-[#e0e0e0] text-[17px] leading-snug">
+                                        <span className="text-gray-800 dark:text-[#e0e0e0] text-[17px] leading-snug font-medium">
                                              I agree that my review can be published on the<br />website.
                                         </span>
                                    </label>
@@ -183,7 +183,7 @@ export function ReviewsAndCounter() {
                                         <button
                                              type="submit"
                                              disabled={submitting || !rating || !agreed}
-                                             className="bg-white text-black font-semibold text-[16px] px-8 py-3.5 rounded-lg hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                             className="bg-black text-white dark:bg-white dark:text-black font-semibold text-[16px] px-8 py-3.5 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                         >
                                              {submitting ? "Submitting..." : "Submit Review"}
                                         </button>
@@ -198,12 +198,12 @@ export function ReviewsAndCounter() {
                                         <div className="w-6 h-6 border-2 border-[#ff3333] border-t-transparent rounded-full animate-spin" />
                                    </div>
                               ) : reviews.length === 0 ? (
-                                   <div className="py-16 text-center border border-dashed border-white/5 rounded-2xl bg-[#0a0a0a]">
-                                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/5 mb-4">
-                                             <Star className="w-5 h-5 text-gray-500 opacity-50" />
+                                   <div className="py-16 text-center border border-dashed border-border rounded-2xl bg-white dark:bg-[#0a0a0a]">
+                                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-full dark:bg-white/5 bg-black/5 mb-4">
+                                             <Star className="w-5 h-5 text-gray-400 opacity-50" />
                                         </div>
-                                        <h3 className="text-lg font-medium text-white/80">No Reviews Yet</h3>
-                                        <p className="text-sm text-gray-500 mt-1">Be the first to share your experience.</p>
+                                        <h3 className="text-lg font-medium text-foreground/80">No Reviews Yet</h3>
+                                        <p className="text-sm text-muted-foreground mt-1">Be the first to share your experience.</p>
                                    </div>
                               ) : (
                                    <div className="flex flex-col gap-6">
@@ -214,29 +214,26 @@ export function ReviewsAndCounter() {
                                                   whileInView={{ opacity: 1, y: 0 }}
                                                   viewport={{ once: true, margin: "-50px" }}
                                                   transition={{ duration: 0.4, delay: Math.min(i, 5) * 0.1 }}
-                                                  className="bg-[#121212] rounded-[32px] p-8 sm:p-10 flex flex-col items-start space-y-6 w-full shadow-2xl relative z-10 mx-auto max-w-2xl border border-white/5"
+                                                  className="bg-white dark:bg-[#121212] rounded-[32px] p-8 sm:p-10 flex flex-col items-start space-y-6 w-full shadow-xl dark:shadow-2xl relative z-10 mx-auto max-w-2xl border border-gray-200 dark:border-white/5 transition-colors"
                                              >
                                                   {/* Star Rating Layout */}
                                                   <div className="flex gap-1.5 -ml-0.5">
                                                        {[1, 2, 3, 4, 5].map((star) => (
                                                             <Star
                                                                  key={star}
-                                                                 className={`w-[18px] h-[18px] ${review.rating >= star ? 'text-[#ff3333] fill-[#ff3333]' : 'text-[#333] fill-[#333]'}`}
+                                                                 className={`w-[18px] h-[18px] ${review.rating >= star ? 'text-[#ff3333] fill-[#ff3333]' : 'text-gray-200 dark:text-[#333] fill-gray-200 dark:fill-[#333]'}`}
                                                             />
                                                        ))}
                                                   </div>
 
                                                   {/* Review Content */}
-                                                  <p className="text-[#888] text-[16px] sm:text-[17px] leading-relaxed italic w-full">
+                                                  <p className="text-gray-600 dark:text-[#888] text-[16px] sm:text-[17px] leading-relaxed italic w-full">
                                                        &quot;{review.content}&quot;
                                                   </p>
 
                                                   {/* Reviewer Details */}
                                                   <div className="flex flex-col space-y-1.5 w-full pt-2">
-                                                       <span className="text-[#e0e0e0] font-medium text-[16px]">{review.name}</span>
-                                                       {review.role && (
-                                                            <span className="text-[#ff3333] text-[12px] tracking-wider uppercase font-semibold">{review.role}</span>
-                                                       )}
+                                                       <span className="text-black dark:text-[#e0e0e0] font-medium text-[16px]">{review.name}</span>
                                                   </div>
                                              </motion.div>
                                         ))}
@@ -247,7 +244,7 @@ export function ReviewsAndCounter() {
                </div>
 
                {/* Hidden element to satisfy Turbopack cached HMR graphs */}
-               <div className="hidden"><Check /></div>
+               <div className="hidden"><Check /><Send /></div>
           </div>
      );
 }

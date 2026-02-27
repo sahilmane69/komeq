@@ -49,7 +49,7 @@ export function AnimatedPrice() {
 
                     {/* Real Value */}
                     <div className="flex flex-col items-center">
-                         <div className="font-geist text-[15vw] font-bold tracking-tighter md:text-[8vw] flex items-center text-white">
+                         <div className="font-geist text-[15vw] font-bold tracking-tighter md:text-[8vw] flex items-center text-black dark:text-white transition-colors">
                               <NumberFlow
                                    value={displayValueReal}
                                    format={{ minimumFractionDigits: 1, maximumFractionDigits: 1 }}
@@ -57,13 +57,13 @@ export function AnimatedPrice() {
                                    suffix="K"
                               />
                          </div>
-                         <span className="text-sm md:text-base font-medium tracking-widest uppercase text-white/50 mt-2">
+                         <span className="text-sm md:text-base font-medium tracking-widest uppercase text-black/50 dark:text-white/50 mt-2 transition-colors">
                               Real Value
                          </span>
                     </div>
 
                     {/* Divider */}
-                    <div className="hidden md:block w-px h-24 bg-white/10 relative">
+                    <div className="hidden md:block w-px h-24 bg-black/10 dark:bg-white/10 relative transition-colors">
                          <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-[2px] bg-linear-to-b from-transparent via-[#ff3333]/50 to-transparent blur-[2px]" />
                     </div>
 

@@ -92,7 +92,7 @@ export const FooterBasic = () => {
                <div className="flex w-full items-center justify-between mt-auto mb-20 md:mb-32 relative z-10 px-0">
                     <div className="text-sm md:text-base tracking-wider text-foreground/50 max-w-2xl lg:max-w-4xl leading-relaxed mt-4 md:mt-0 px-0 md:px-4 text-justify">
                          <div className="mb-4 md:mb-6">
-                              <span className="inline-flex px-1 py-0 text-foreground text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-widest opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">SEE U AT IPUB</span>
+                              <span className="inline-flex px-1 py-0 text-foreground text-3xl md:text-5xl lg:text-7xl font-black uppercase tracking-widest opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.1)]">SEE YOU AT IPU, BHUBANESWAR</span>
                          </div>
                          The website design and full-stack development were handled by{" "}
                          <span className="relative group/sahil inline-block cursor-help mx-1">
