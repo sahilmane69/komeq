@@ -85,6 +85,37 @@ export const ScrollingSpecs = () => {
                               power delivery to both the control electronics and motors.
                          </p>
 
+                         {/* Hardware Specs Highlight Box */}
+                         <div className="bg-foreground/5 p-6 md:p-8 rounded-3xl border border-foreground/10 my-10 shadow-lg">
+                              <h3 className="text-xl md:text-2xl font-bold mb-6 text-foreground tracking-tight">Core Hardware Specifications</h3>
+                              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 text-base md:text-lg font-medium text-foreground/80">
+                                   <li className="flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-red-500 shrink-0 shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
+                                        <span>Arduino Nano</span>
+                                   </li>
+                                   <li className="flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-red-500 shrink-0 shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
+                                        <span>MPU-6050 Gyrosensor</span>
+                                   </li>
+                                   <li className="flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-red-500 shrink-0 shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
+                                        <span>L298N Motor Driver</span>
+                                   </li>
+                                   <li className="flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-red-500 shrink-0 shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
+                                        <span>2× Geared Motors (300 RPM)</span>
+                                   </li>
+                                   <li className="flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-red-500 shrink-0 shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
+                                        <span>Active Buzzer Module</span>
+                                   </li>
+                                   <li className="flex items-center gap-3">
+                                        <div className="w-2 h-2 rounded-full bg-red-500 shrink-0 shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
+                                        <span>1× Status LED</span>
+                                   </li>
+                              </ul>
+                         </div>
+
                          <p>
                               Extensive sensor calibration and PID tuning are performed to adapt
                               the system to real-world conditions such as uneven surfaces, sudden
